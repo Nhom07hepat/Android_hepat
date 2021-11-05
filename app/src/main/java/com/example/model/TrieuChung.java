@@ -3,8 +3,8 @@ package com.example.model;
 public class TrieuChung {
     private String trieuchung;
 
-    public TrieuChung(String triechung) {
-        this.trieuchung = triechung;
+    public TrieuChung(String trieuchung) {
+        this.trieuchung = trieuchung;
 
     }
 
@@ -13,4 +13,7 @@ public class TrieuChung {
         return trieuchung;
     }
 
+    public void setTrieuchung(String trieuchung) {
+        this.trieuchung = trieuchung;
+    }
 }
