@@ -17,8 +17,12 @@
         <activity
             android:name=".activity_tu_van"
             android:exported="true" />
+
         <activity
             android:name=".Login_Activity"
+            android:exported="true"/>
+        <activity
+            android:name=".TuVan1_Activity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/txtForum"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:text="Tư vấn"
+        android:textSize="28sp"
+        android:background="#37D16D"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <ImageButton
+        android:id="@+id/imbtnBackTuVan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:background="@null"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_tim2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <!--    <EditText-->
+    <!--        android:id="@+id/editText"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:layout_margin="20dp"-->
+
+    <!--        android:background="@drawable/botron_edit"-->
+    <!--        android:drawableLeft="@drawable/ic_baseline_search_24"-->
+    <!--        android:hint="  Tìm triệu chứng..."-->
+    <!--        android:padding="5dp"-->
+    <!--        android:shadowRadius="@android:integer/config_mediumAnimTime"-->
+    <!--        android:textSize="28sp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.151"-->
+    <!--        tools:layout_editor_absoluteX="30dp" />-->
+
+    <AutoCompleteTextView
+        android:id="@+id/autoTrieuChung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="1"
+        android:ems="10"
+        android:hint="  Tìm triệu chứng..."
+
+        android:background="@drawable/botron_edit"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:padding="5dp"
+        android:shadowRadius="@android:integer/config_mediumAnimTime"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151"
+        tools:layout_editor_absoluteX="30dp"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
