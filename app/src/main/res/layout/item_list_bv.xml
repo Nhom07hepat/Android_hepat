@@ -1,72 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
-    android:layout_margin="10dp"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    android:padding="10dp">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imvBenhVien"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bv_tudu"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:background="#ECF0ED"
-        >
-        <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/imvThumbBV"
-            android:layout_margin="5dp"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bv_tudu"
-            app:civ_border_width="1dp"
-            app:civ_border_color="#34D16D"/>
-
-        <LinearLayout
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            >
-
-
-            <TextView
-                android:layout_marginTop="2dp"
-                android:id="@+id/txtNameBV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Bệnh viện Từ Dũ"
-                android:textSize="23sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_gravity="center"
-                android:id="@+id/txtAddress"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="284, Cổng Quỳnh, Phạm Ngũ Lão, TP HCM"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:layout_margin="10dp"/>
-
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="37dp"
-                android:layout_gravity="right"
-                android:backgroundTint="#22DD72"
-                android:text="Đặt lịch"
-                android:textColor="@color/white"
-                android:textSize="9sp"
-                android:textStyle="italic">
-
-            </Button>
-
-        </LinearLayout>
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toEndOf="@+id/imvBenhVien"
+        android:layout_marginStart="10dp"
+        android:layout_centerVertical="true">
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bệnh viện Từ Dũ"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="284, Cổng Quỳnh, Phạm Ngũ Lão, TP HCM"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btnBooking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="#22DD72"
+            android:text="Đặt lịch"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="italic"/>
     </LinearLayout>
 
-
-
-</LinearLayout>
+</RelativeLayout>

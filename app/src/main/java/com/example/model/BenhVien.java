@@ -1,30 +1,43 @@
 package com.example.model;
 
 
-public class BenhVien {
+import java.io.Serializable;
 
-    private int thumbBV;
-    private String name;
-    private String address;
+public class BenhVien implements Serializable {
+    private  int imvBenhVien;
+    private String txtName;
+    private String txtAddress;
 
-    public BenhVien(int thumbBV, String name, String address) {
-        this.thumbBV = thumbBV;
-        this.name = name;
-        this.address = address;
-
+    public BenhVien(int imvBenhVien, String txtName, String txtAddress) {
+        this.imvBenhVien = imvBenhVien;
+        this.txtName = txtName;
+        this.txtAddress = txtAddress;
     }
 
-    public int getThumbBV() {
-        return thumbBV;
+    public int getImvBenhVien() {
+        return imvBenhVien;
     }
 
-    public String getName() {
-        return name;
+    public void setImvBenhVien(int imvBenhVien) {
+        this.imvBenhVien = imvBenhVien;
     }
 
-    public String getAddress() {
-        return address;
+    public String getTxtName() {
+        return txtName;
     }
+
+    public void setTxtName(String txtName) {
+        this.txtName = txtName;
+    }
+
+    public String getTxtAddress() {
+        return txtAddress;
+    }
+
+    public void setTxtAddress(String txtAddress) {
+        this.txtAddress = txtAddress;
+    }
+
 
 }
 

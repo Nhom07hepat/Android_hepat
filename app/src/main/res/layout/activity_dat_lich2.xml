@@ -38,53 +38,52 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="52dp"
-                android:layout_marginBottom="976dp"
-                android:text="Bệnh viện Đại học Y dược"
-                android:textColor="@color/white"
-                android:textSize="27sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="40dp"
-                android:layout_marginBottom="940dp"
-                android:text="201 Nguyễn Chí Thanh, P.12, Q.5"
-                android:textColor="@color/white"
-                android:textSize="20sp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
+                app:layout_constraintRight_toRightOf="parent">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="192dp"
-                android:layout_marginBottom="900dp"
-                android:justificationMode="inter_word"
-                android:text="028 3855 4269"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
+                <TextView
+                    android:id="@+id/txtNameBV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Bệnh viện Đại học Y dược"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
 
-            <ImageView
-                android:id="@+id/imvDinhVi"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="168dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitStart"
-                android:src="@drawable/dinhvi_2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.059"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/txtAddressBV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="201 Nguyễn Chí Thanh, P.12, Q.5"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="192dp"
+                    android:layout_marginBottom="900dp"
+                    android:justificationMode="inter_word"
+                    android:text="028 3855 4269"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -96,19 +95,6 @@
                 android:textColor="@color/black"
                 android:textSize="28sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imvDienThoai"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="224dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitStart"
-                android:src="@drawable/dienthoai"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.11"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
