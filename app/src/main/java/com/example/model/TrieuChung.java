@@ -1,19 +1,17 @@
 package com.example.model;
 
 public class TrieuChung {
-    private String trieuchung;
+    private String trieuChung;
 
-    public TrieuChung(String trieuchung) {
-        this.trieuchung = trieuchung;
-
+    public TrieuChung(String trieuChung) {
+        this.trieuChung = trieuChung;
     }
 
-
-    public String getTrieuchung() {
-        return trieuchung;
+    public String getTrieuChung() {
+        return trieuChung;
     }
 
-    public void setTrieuchung(String trieuchung) {
-        this.trieuchung = trieuchung;
+    public void setTrieuChung(String trieuChung) {
+        this.trieuChung = trieuChung;
     }
 }

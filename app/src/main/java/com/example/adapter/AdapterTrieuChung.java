@@ -56,7 +56,7 @@ public class AdapterTrieuChung extends BaseAdapter {
             holder = (AdapterTrieuChung.ViewHolder) view.getTag();
         }
         TrieuChung t = trieuchung.get(i);
-        holder.txtTrieuChung.setText(String.valueOf(t.getTrieuchung()));
+        holder.txtTrieuChung.setText(String.valueOf(t.getTrieuChung()));
         return view;
 
     }
