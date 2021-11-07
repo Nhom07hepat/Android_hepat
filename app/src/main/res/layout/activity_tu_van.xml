@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".activity_tu_van">
     <LinearLayout
-
         android:orientation="vertical"
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -40,8 +39,8 @@
             app:layout_constraintVertical_bias="0.056"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-        <EditText
-            android:id="@+id/edtSearch"
+        <AutoCompleteTextView
+            android:id="@+id/autSearch"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:background="@drawable/nen_2"
@@ -49,8 +48,9 @@
             android:hint="Tìm triệu chứng"
             android:minHeight="48dp"
             android:textSize="20dp"
+            android:completionThreshold="1"
+            android:completionHint="Tìm triệu chứng"
             app:layout_constraintLeft_toRightOf="@id/imbtnHeart"
-
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
@@ -65,21 +65,6 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
     </LinearLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout">
 
-        <ListView
-            android:id="@+id/lvTC"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:listSelector="#34D16D"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

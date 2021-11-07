@@ -13,33 +13,25 @@
             android:name=".activity_verifyotp"
             android:exported="false"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activity_tu_van"
-            android:exported="true" />
-
-        <activity
-            android:name=".Login_Activity"
-            android:exported="true"/>
-        <activity
-            android:name=".Booking_Activity"
-            android:exported="true" />
-
-
-
-
-        <activity
-            android:name=".ThongBao_Activity"
-            android:exported="false" />
-        <activity
-        android:name=".TuVan1_Activity"
-        android:exported="true">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Login_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Booking_Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".ThongBao_Activity"
+            android:exported="false" />
         <activity
             android:name=".HoSo_Activity"
             android:exported="false" />
@@ -58,9 +50,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
