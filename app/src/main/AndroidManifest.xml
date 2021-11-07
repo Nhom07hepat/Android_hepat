@@ -22,19 +22,18 @@
             android:name=".Login_Activity"
             android:exported="true"/>
         <activity
-            android:name=".TuVan1_Activity"
-            android:exported="true"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"
-            >
+            android:name=".Booking_Activity"
+            android:exported="true" />
 
-        </activity>
+
+
+
         <activity
             android:name=".ThongBao_Activity"
             android:exported="false" />
         <activity
-            android:name=".Booking_Activity"
-            android:exported="true" >
+        android:name=".TuVan1_Activity"
+        android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

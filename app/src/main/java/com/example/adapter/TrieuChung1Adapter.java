@@ -33,7 +33,7 @@ public class TrieuChung1Adapter extends ArrayAdapter<TrieuChung> {
         }
         TextView txtTrieuChung = convertView.findViewById(R.id.txtNameTC);
         TrieuChung trieuChung = getItem(position);
-        txtTrieuChung.setText(trieuChung.getTrieuchung());
+        txtTrieuChung.setText(trieuChung.getTrieuChung());
         return convertView;
     }
 
@@ -49,7 +49,7 @@ public class TrieuChung1Adapter extends ArrayAdapter<TrieuChung> {
                 } else {
                     String filter = charSequence.toString().toLowerCase().trim();
                     for (TrieuChung trieuChung : listTrieuChungS) {
-                        if (trieuChung.getTrieuchung().toLowerCase().contains(filter)) {
+                        if (trieuChung.getTrieuChung().toLowerCase().contains(filter)) {
                             listSuggest.add(trieuChung);
                         }
                     }
@@ -70,7 +70,7 @@ public class TrieuChung1Adapter extends ArrayAdapter<TrieuChung> {
             }
             @Override
             public CharSequence convertResultToString(Object resultValue){
-                return ((TrieuChung) resultValue).getTrieuchung();
+                return ((TrieuChung) resultValue).getTrieuChung();
             }
         };
     }
