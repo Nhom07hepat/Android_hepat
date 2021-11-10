@@ -4,18 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp">
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imvBenhVien"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/bv_tudu"/>
+        android:src="@drawable/bv_tudu" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_toEndOf="@+id/imvBenhVien"
+        android:layout_centerVertical="true"
         android:layout_marginStart="10dp"
-        android:layout_centerVertical="true">
+        android:layout_toEndOf="@+id/imvBenhVien"
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/txtName"
             android:layout_width="match_parent"
@@ -23,7 +26,8 @@
             android:text="Bệnh viện Từ Dũ"
             android:textColor="@color/black"
             android:textSize="24sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/txtAddress"
             android:layout_width="match_parent"
@@ -31,6 +35,7 @@
             android:text="284, Cổng Quỳnh, Phạm Ngũ Lão, TP HCM"
             android:textColor="@color/black"
             android:textSize="18sp" />
+
         <Button
             android:id="@+id/btnBooking"
             android:layout_width="wrap_content"
@@ -40,7 +45,7 @@
             android:text="Đặt lịch"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:textStyle="italic"/>
+            android:textStyle="italic" />
     </LinearLayout>
 
 </RelativeLayout>
