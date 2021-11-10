@@ -12,13 +12,17 @@ import android.widget.TabHost;
 
 
 import com.example.adapter.LichKhamAdapter;
+import com.example.adapter.LichKhamdahtAdapter;
+import com.example.model.LichKhamDaht;
 import com.example.model.LichKhamht;
 
 import java.util.ArrayList;
 
 public class LichKham extends AppCompatActivity {
-    ListView lvLichkhamht;
+    ListView lvLichkhamht, lvLichKhamdaht;
     ArrayList<LichKhamht> lichKhamhts;
+    ArrayList<LichKhamDaht> lichKhamDahts;
+    LichKhamdahtAdapter lichKhamdahtAdapter;
     LichKhamAdapter adapter;
     ImageButton imbtnBack;
 
@@ -69,13 +73,20 @@ public class LichKham extends AppCompatActivity {
     private void loadData() {
         adapter=new LichKhamAdapter(this,R.layout.list_view_lich_kham_hien_tai,lichKhamhts);
         lvLichkhamht.setAdapter(adapter);
+        lichKhamdahtAdapter=new LichKhamdahtAdapter(this,R.layout.list_view_lich_kham_da_hoan_thanh,lichKhamDahts);
+        lvLichKhamdaht.setAdapter(lichKhamdahtAdapter);
     }
 
     private void initData() {
         lichKhamhts=new ArrayList<>();
         lichKhamhts.add(new LichKhamht("Bệnh viện Từ Dũ","10:00 AM","12/09/21","Đã xác nhận",R.drawable.ic_baseline_check_24));
         lichKhamhts.add(new LichKhamht("Bệnh viện Y dược","8:00 AM","12/10/21","Chưa xác nhận",R.drawable.ic_baseline_close_24));
-        lichKhamhts.add(new LichKhamht("Bệnh viện Chợ Rẫy","14:00 AM","30/11/21","Đã xác nhận",R.drawable.ic_baseline_check_24));
+        lichKhamhts.add(new LichKhamht("Bệnh viện Chợ Rẫy","14:00 PM","30/11/21","Đã xác nhận",R.drawable.ic_baseline_check_24));
+
+        lichKhamDahts=new ArrayList<>();
+        lichKhamDahts.add(new LichKhamDaht("Bệnh viện Từ Dũ","10:00 AM","12/09/21"));
+        lichKhamDahts.add(new  LichKhamDaht("Bệnh viện Y dươc","8:00 AM","12/10/21"));
+        lichKhamDahts.add(new LichKhamDaht("Bệnh viện Chợ Rẫy","14:00 PM","30/11/21"));
     }
 
 
@@ -83,5 +94,6 @@ public class LichKham extends AppCompatActivity {
 
         lvLichkhamht=findViewById(R.id.lvlichkhamht);
         imbtnBack=findViewById(R.id.imbtnBacklichkham);
+        lvLichKhamdaht=findViewById(R.id.lvlichkhamdaht);
     }
 }

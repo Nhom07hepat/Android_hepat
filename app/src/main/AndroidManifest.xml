@@ -17,11 +17,7 @@
         <activity
             android:name=".activity_tu_van"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Login_Activity"
@@ -43,7 +39,13 @@
             android:exported="false" />
         <activity
             android:name=".LichKham"
-            android:exported="false" />
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".TrangUser"
             android:exported="false" />

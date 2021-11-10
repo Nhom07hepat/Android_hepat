@@ -30,8 +30,8 @@ public class activity_tu_van extends AppCompatActivity {
         AutoCompleteTextView autSearch = findViewById(R.id.autSearch);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,TrieuChungs);
         autSearch.setAdapter(adapter);
-        btnTimKiem = findViewById(R.id.btnTimKiem);
-        txtTimKiem = findViewById(R.id.txtTimKiem);
+//        btnTimKiem = findViewById(R.id.btnTimKiem);
+//        txtTimKiem = findViewById(R.id.txtTimKiem);
         btnTimKiem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
