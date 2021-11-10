@@ -1,6 +1,8 @@
 package com.example.giaodientrangchu;
 
 import android.app.Dialog;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,13 +53,16 @@ public class DatLich2_Activity extends AppCompatActivity {
         btn7 = findViewById(R.id.btn7);
         btn8 = findViewById(R.id.btn8);
 
+
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int day) {
-              String date = day + "/" +month + "/" + year;
-              txtNgayDat.setText(date);
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                String date = dayOfMonth + "/" + month + "/"+ year;
+                txtNgayDat.setText(date);
             }
         });
+        
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,19 +113,20 @@ public class DatLich2_Activity extends AppCompatActivity {
         });
         dialog = new Dialog(DatLich2_Activity.this);
         dialog.setContentView(R.layout.custom_dialog);
-        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.bg_dialog));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.bg_dialog));
+        }
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.setCancelable(false);
-
-        Button btnXacNhan, btnHuy;
-        btnXacNhan = findViewById(R.id.btnXacNhan);
-        btnHuy = findViewById(R.id.btnHuy);
-
+        Button btnXacNhan = dialog.findViewById(R.id.btnXacNhan);
+        Button btnHuy = dialog.findViewById(R.id.btnHuy);
         btnXacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(DatLich2_Activity.this,"Xác nhận",Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
+                Intent intent = new Intent(DatLich2_Activity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
         btnHuy.setOnClickListener(new View.OnClickListener() {

@@ -15,56 +15,75 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-25dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.08"
+            tools:layout_editor_absoluteX="1dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/imbtnBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="#34D16D"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.056"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                <TextView
+                    android:id="@+id/txtTimTC"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tìm triệu chứng"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+            <Spinner
+                android:id="@+id/spinSearch"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:layout_constraintLeft_toRightOf="@id/imbtnHeart"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_tim2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
     <LinearLayout
-        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-25dp"
+        android:layout_height="match_parent"
         android:gravity="center_vertical"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08"
-        tools:layout_editor_absoluteX="1dp">
-        <ImageButton
-            android:id="@+id/imbtnBack"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:backgroundTint="#34D16D"
-            android:src="@drawable/ic_back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.056"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <AutoCompleteTextView
-            android:id="@+id/autSearch"
-            android:layout_width="280dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/nen_2"
-            android:drawableLeft="@drawable/ic_baseline_search_24"
-            android:hint="Tìm triệu chứng"
-            android:minHeight="48dp"
-            android:textSize="20dp"
-            android:completionThreshold="1"
-            android:completionHint="Tìm triệu chứng"
-            app:layout_constraintLeft_toRightOf="@id/imbtnHeart"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/imbtnUser"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="5dp"
-            android:background="@null"
-            android:src="@drawable/icon_tim2"
-            app:layout_constraintLeft_toRightOf="@id/txtSearch"
-            tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="0.149"
+        tools:layout_editor_absoluteX="0dp"
+        android:orientation="vertical">
+        <fragment
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.example.fragment.BlankFragment"/>
 
     </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

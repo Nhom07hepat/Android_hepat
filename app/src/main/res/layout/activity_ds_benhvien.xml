@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ds_benhvien">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/khunggio">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imvBenhVien"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bv_tudu" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/imvBenhVien"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bệnh viện Từ Dũ"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="284, Cổng Quỳnh, Phạm Ngũ Lão, TP HCM"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="#22DD72"
+                android:text="Đặt lịch"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/khunggio"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imvBenhVien1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bvyduoc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/imvBenhVien"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bệnh viện Y Dược"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtAddress1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="284, Cổng Quỳnh, Phạm Ngũ Lão, TP HCM"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnBooking1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:backgroundTint="#22DD72"
+                android:text="Đặt lịch"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
