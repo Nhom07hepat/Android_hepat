@@ -3,6 +3,7 @@ package com.example.giaodientrangchu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -36,6 +37,13 @@ public class ThongBao_Activity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+       lvTB.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           @Override
+           public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+               Intent intent=new Intent(ThongBao_Activity.this,MainActivity.class);
+               startActivity(intent);
+           }
+       });
     }
 
     private void linkView() {
