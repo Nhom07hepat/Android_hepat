@@ -2,6 +2,7 @@ package com.example.giaodientrangchu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ import com.example.model.Postdiendan;
 import java.util.ArrayList;
 
 public class DienDan extends AppCompatActivity {
-    ImageButton imbtnBack, imbtnAdd;
+    ImageButton imbtnBack, imbtnAdd,imbtnMore;
     ListView lvDienDan;
     ArrayList<Postdiendan> postdiendans;
     DiendanAdapter adapter;
@@ -39,6 +40,8 @@ public class DienDan extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
     }
 
     private void loadData() {
@@ -57,5 +60,6 @@ public class DienDan extends AppCompatActivity {
 
         lvDienDan=findViewById(R.id.lvDienDan);
         imbtnBack=findViewById(R.id.imbtnBackdiendan);
+        imbtnMore=findViewById(R.id.imbtnMore);
     }
 }
