@@ -40,7 +40,14 @@ public class DienDan extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        imbtnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Dialog dialog=new Dialog(DienDan.this);
+                dialog.setContentView(R.layout.nut_them_cua_dien_dan);
+                dialog.show();
+            }
+        });
 
     }
 
@@ -61,5 +68,6 @@ public class DienDan extends AppCompatActivity {
         lvDienDan=findViewById(R.id.lvDienDan);
         imbtnBack=findViewById(R.id.imbtnBackdiendan);
         imbtnMore=findViewById(R.id.imbtnMore);
+        imbtnAdd=findViewById(R.id.imbtnAdd);
     }
 }

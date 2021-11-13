@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class TrangUser extends AppCompatActivity {
     ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan;
-    Button btnDangXuat,btnCapNhat;
+    Button btnDangXuat,btnCapNhat,btnGioiThieu;
     Dialog dialog;
 
 
@@ -27,6 +27,7 @@ public class TrangUser extends AppCompatActivity {
         imbtnLichKham = findViewById(R.id.imbtnLichKham);
         imbtnThongBao = findViewById(R.id.imbtnThongBao);
         imbtnTaiKhoan = findViewById(R.id.imbtnTaikhoan);
+        btnGioiThieu=findViewById(R.id.btnGioithieu);
         btnDangXuat = findViewById(R.id.btnDangxuat);
         btnCapNhat = findViewById(R.id.btnThongtincanhan);
         btnCapNhat.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +75,13 @@ public class TrangUser extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TrangUser.this, ThongBao_Activity.class);
+                startActivity(intent);
+            }
+        });
+        btnGioiThieu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TrangUser.this, GioithieuveHepat.class);
                 startActivity(intent);
             }
         });

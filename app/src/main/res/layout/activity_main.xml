@@ -218,6 +218,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginLeft="20dp"/>
             <Button
+                android:id="@+id/btnXemthem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Xem thêm"

@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton imbtnDatlich,imbtnTuVan,imbtnBenhAn,imbtnDienDan,imbtnUser,imbtnHomePage,imbtnLichKham,imbtnThongBao,imbtnTaiKhoan;
-    
+    Button btnXemthem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +71,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnXemthem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(MainActivity.this,GioithieuveHepat.class);
+                startActivity(intent);
+            }
+        });
     }
 
 
@@ -83,5 +91,6 @@ public class MainActivity extends AppCompatActivity {
         imbtnLichKham=findViewById(R.id.imbtnLichKham);
         imbtnThongBao=findViewById(R.id.imbtnThongBao);
         imbtnTaiKhoan=findViewById(R.id.imbtnTaikhoan);
+        btnXemthem=findViewById(R.id.btnXemthem);
     }
 }
