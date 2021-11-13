@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Đăng xuất"
-        android:textSize="35sp"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:textSize="35sp"
+        android:textStyle="bold" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,8 +25,8 @@
         android:id="@+id/btnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="150dp"
         android:backgroundTint="@color/white"
         android:text="Đồng ý"
         android:textColor="@color/black"
@@ -34,8 +36,8 @@
         android:id="@+id/btnHuyDangXuat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="310dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="150dp"
         android:backgroundTint="@color/white"
         android:text="Hủy"
         android:textColor="@color/black"

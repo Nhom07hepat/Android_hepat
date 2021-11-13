@@ -22,7 +22,9 @@ public class DatLich2_Activity extends AppCompatActivity {
     private TextView txtNgayDat, txtGioDat;
     private Button btnLich, btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
     Dialog dialog;
-
+public static final String Bv = "Bệnh viện ";
+public static final String Ngaydat = "Ngày đặt";
+public static final String Giodat = "Giờ đặt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +54,7 @@ public class DatLich2_Activity extends AppCompatActivity {
         btn6 = findViewById(R.id.btn6);
         btn7 = findViewById(R.id.btn7);
         btn8 = findViewById(R.id.btn8);
+
 
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
@@ -125,8 +128,12 @@ public class DatLich2_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(DatLich2_Activity.this,"Xác nhận",Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
-                Intent intent = new Intent(DatLich2_Activity.this,MainActivity.class);
+                Intent intent = new Intent(DatLich2_Activity.this,thongtinBooking.class);
                 startActivity(intent);
+                String bv = txtNameBV.getText().toString();
+                String ngaydat = txtNgayDat.getText().toString();
+                String giodat = txtGioDat.getText().toString();
+                truyenDL(bv,ngaydat,giodat);
             }
         });
         btnHuy.setOnClickListener(new View.OnClickListener() {
@@ -140,7 +147,18 @@ public class DatLich2_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 dialog.show();
+
             }
         });
     }
+
+
+    public void truyenDL(String bv, String ngaydat, String giodat){
+        Intent intent = new Intent(DatLich2_Activity.this,thongtinBooking.class);
+        intent.putExtra(Bv,bv);
+        intent.putExtra(Ngaydat,ngaydat);
+        intent.putExtra(Giodat,giodat);
+        startActivity(intent);
+    }
+
 }

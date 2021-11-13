@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GiaodienTrangChu">
         <activity
+            android:name=".thongtinBooking"
+            android:exported="false" />
+        <activity
             android:name=".ThongBaoUongThuoc"
             android:exported="false" />
         <activity
@@ -20,22 +23,25 @@
             android:name=".capnhatthongtin"
             android:exported="true" />
         <activity
-            android:name=".ds_benhvien"
-            android:exported="false" />
-        <activity
             android:name=".activity_verifyotp"
             android:exported="false"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activity_tu_van"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Login_Activity"
             android:exported="true" />
         <activity
             android:name=".Booking_Activity"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".ThongBao_Activity"
             android:exported="true" />
@@ -50,21 +56,15 @@
             android:exported="false" />
         <activity
             android:name=".LichKham"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:hardwareAccelerated="false">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:hardwareAccelerated="false" />
         <activity
             android:name=".TrangUser"
             android:exported="true"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
