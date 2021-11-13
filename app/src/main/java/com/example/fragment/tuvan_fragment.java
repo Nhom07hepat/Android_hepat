@@ -1,34 +1,54 @@
 package com.example.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
+import com.example.adapter.AdapterBV;
+import com.example.giaodientrangchu.Booking_Activity;
+import com.example.giaodientrangchu.DatLich2_Activity;
 import com.example.giaodientrangchu.R;
-import com.example.giaodientrangchu.ds_benhvien;
+import com.example.giaodientrangchu.thongtinBooking;
+import com.example.model.BenhVien;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class tuvan_fragment extends Fragment {
-    Button btnXem;
+    private RecyclerView rcvBV;
+    private AdapterBV adapterBV;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-       View view = inflater.inflate(R.layout.fragment_tuvan_fragment,container,false);
-       btnXem = view.findViewById(R.id.btnXem);
-       btnXem.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent intent = new Intent(getActivity(), ds_benhvien.class);
-               startActivity(intent);
+        View view = inflater.inflate(R.layout.fragment_tuvan_fragment,container,false);
+        rcvBV = view.findViewById(R.id.recBV);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        rcvBV.setLayoutManager(linearLayoutManager);
 
-           }
-       });
-       return view;
+        adapterBV = new AdapterBV(getActivity(),getListBV());
+        rcvBV.setAdapter(adapterBV);
+        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL);
+        rcvBV.addItemDecoration(itemDecoration);
+        return view;
+    }
+    private List<BenhVien> getListBV() {
+        List<BenhVien> benhViens = new ArrayList<>();
+        benhViens.add(new BenhVien(R.drawable.bv_tudu,"Bệnh viện Từ Dũ","284,Cống Quỳnh,Phạm Ngũ Lão,Q.1,HCM"));
+        benhViens.add(new BenhVien(R.drawable.bv_choray,"Bệnh viện Chợ Rẫy","21B,Nguyễn Chí Thanh,P.12,Q.5,HCM"));
+        benhViens.add(new BenhVien(R.drawable.bv_yduoc,"Bệnh viện Y Dược","201,Nguyễn Chí Thanh,P.12,Q.5,HCM"));
+        return  benhViens;
+
     }
 }
