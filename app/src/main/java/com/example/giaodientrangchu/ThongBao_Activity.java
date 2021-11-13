@@ -15,10 +15,11 @@ import com.example.adapter.AdapterTB;
 import java.util.ArrayList;
 
 public class ThongBao_Activity extends AppCompatActivity {
+    ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan;
     ListView lvTB;
     ArrayList<ThongBao> arrayList;
     AdapterTB adapterTB;
-    ImageButton imbtnBack;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +31,7 @@ public class ThongBao_Activity extends AppCompatActivity {
     }
 
     private void addEvents() {
-        imbtnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(ThongBao_Activity.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
+
        lvTB.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            @Override
            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -44,11 +39,38 @@ public class ThongBao_Activity extends AppCompatActivity {
                startActivity(intent);
            }
        });
+        imbtnLichKham.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ThongBao_Activity.this, LichKham.class);
+                startActivity(intent);
+            }
+        });
+        imbtnTaiKhoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ThongBao_Activity.this, TrangUser.class);
+                startActivity(intent);
+            }
+        });
+
+        imbtnHomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ThongBao_Activity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void linkView() {
         lvTB = findViewById(R.id.lvTB);
-        imbtnBack=findViewById(R.id.imbtnBackThongbao);
+        imbtnHomePage = findViewById(R.id.imbtnHomePage);
+        imbtnLichKham = findViewById(R.id.imbtnLichKham);
+        imbtnThongBao = findViewById(R.id.imbtnThongBao);
+        imbtnTaiKhoan = findViewById(R.id.imbtnTaikhoan);
+
     }
 
     private void loadData() {

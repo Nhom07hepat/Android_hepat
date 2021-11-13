@@ -28,7 +28,7 @@ public class LichKham extends AppCompatActivity {
     LichKhamDaHuyApdater lichKhamDaHuyApdater;
     LichKhamdahtAdapter lichKhamdahtAdapter;
     LichKhamAdapter adapter;
-    ImageButton imbtnBack;
+    ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan;
 
 
     @Override
@@ -46,13 +46,29 @@ public class LichKham extends AppCompatActivity {
     }
 
     private void addEvents() {
-        imbtnBack.setOnClickListener(new View.OnClickListener() {
+        imbtnTaiKhoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(LichKham.this,MainActivity.class);
+                Intent intent = new Intent(LichKham.this, TrangUser.class);
                 startActivity(intent);
             }
         });
+        imbtnThongBao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LichKham.this, ThongBao_Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        imbtnHomePage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LichKham.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void loadTab() {
@@ -107,8 +123,12 @@ public class LichKham extends AppCompatActivity {
     private void linkView() {
 
         lvLichkhamht=findViewById(R.id.lvlichkhamht);
-        imbtnBack=findViewById(R.id.imbtnBacklichkham);
+
         lvLichKhamdaht=findViewById(R.id.lvlichkhamdaht);
         lvLichKhamdahuy=findViewById(R.id.lvlichkhamdahuy);
+        imbtnHomePage = findViewById(R.id.imbtnHomePage);
+        imbtnLichKham = findViewById(R.id.imbtnLichKham);
+        imbtnThongBao = findViewById(R.id.imbtnThongBao);
+        imbtnTaiKhoan = findViewById(R.id.imbtnTaikhoan);
     }
 }

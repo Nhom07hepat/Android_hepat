@@ -7,13 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="#34D16D"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
     <ScrollView
+        android:id="@+id/scrollviewTrangchi"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="630dp">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -215,17 +217,18 @@
                 android:layout_marginTop="20dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_marginLeft="20dp"/>
-            <TextView
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Xem thêm"
                 android:textSize="18sp"
                 android:textStyle="italic"
                 app:layout_constraintTop_toBottomOf="@id/tbDichvuHepat"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginRight="20dp"
-                android:textColor="#37D16D"/>
+                android:textColor="#37D16D"
+                android:backgroundTint="@color/white"/>
 
             <ImageButton
                 android:id="@+id/imbtnBanner2"
@@ -244,9 +247,12 @@
         android:id="@+id/tbMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/scrollviewTrangchi"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="-50dp"
+        android:layout_marginBottom="10dp"
         android:shrinkColumns="*"
         android:stretchColumns="*"
         android:background="@color/white">
