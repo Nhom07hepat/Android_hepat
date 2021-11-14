@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GiaodienTrangChu">
         <activity
-            android:name=".GioithieuveHepat"
+            android:name=".MainActivity"
+            android:hardwareAccelerated="false"
             android:exported="true" >
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -60,12 +61,12 @@
             android:name=".LichKham"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".TrangUser"
             android:exported="true"
             android:hardwareAccelerated="false"></activity>
         <activity
-            android:name=".TrangUser"
-            android:exported="true"
+            android:name=".GioithieuveHepat"
+            android:exported="false"
             android:screenOrientation="portrait" />
     </application>
 
