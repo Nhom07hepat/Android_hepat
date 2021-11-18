@@ -1,6 +1,8 @@
 package com.example.giaodientrangchu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,9 +10,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import com.example.adapter.AdapterBanner;
+import com.example.model.Banner;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     ImageButton imbtnDatlich,imbtnTuVan,imbtnBenhAn,imbtnDienDan,imbtnUser,imbtnHomePage,imbtnLichKham,imbtnThongBao,imbtnTaiKhoan;
     Button btnXemthem;
+    RecyclerView recycler_banner;
+    List<Banner> bannerList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +28,21 @@ public class MainActivity extends AppCompatActivity {
         
         linkView();
         addEvents();
+        initData();
+    }
+
+    private void initData() {
+        bannerList = new ArrayList<>();
+        bannerList.add(new Banner(R.drawable.banner_main));
+        bannerList.add(new Banner(R.drawable.banner_first));
+        bannerList.add(new Banner(R.drawable.banner_second2));
+        bannerList.add(new Banner(R.drawable.banner_third));
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        manager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recycler_banner.setLayoutManager(manager);
+
+        AdapterBanner adapterBanner = new AdapterBanner(this,bannerList);
+        recycler_banner.setAdapter(adapterBanner);
     }
 
     private void addEvents() {
@@ -92,5 +117,7 @@ public class MainActivity extends AppCompatActivity {
         imbtnThongBao=findViewById(R.id.imbtnThongBao);
         imbtnTaiKhoan=findViewById(R.id.imbtnTaikhoan);
         btnXemthem=findViewById(R.id.btnXemthem);
+        recycler_banner=findViewById(R.id.recycler_banner);
+
     }
 }

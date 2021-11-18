@@ -42,17 +42,27 @@
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/drawable/botron1.xml" value="0.19583333333333333" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/drawable/botron_scrollview.xml" value="0.19583333333333333" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/drawable/botronlayer.xml" value="0.19583333333333333" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/drawable/ic_dang.xml" value="0.13125" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_binhluan.xml" value="0.22" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_booking.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_capnhatthongtin.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_dat_lich2.xml" value="0.1796875" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_dien_dan.xml" value="0.1796875" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_gioithieuve_hepat.xml" value="0.1796875" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_ho_so.xml" value="0.1" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_lich_kham.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_login.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_otp.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_thong_bao.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_thong_bao_uong_thuoc.xml" value="0.1796875" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_thongtin_booking.xml" value="0.1" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_thongtincanhan.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_trang_user.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_verifyotp.xml" value="0.1796875" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/banner1.xml" value="0.3333333333333333" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/banner2.xml" value="0.1796875" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/banner3.xml" value="0.22" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/custom_dialog.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/dialog_dangxuat.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/dialog_hotline.xml" value="0.1796875" />
@@ -65,12 +75,14 @@
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment3.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment4.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment5.xml" value="0.1796875" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/item_banner.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/item_list_bv.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/item_list_thongbao.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/list_trieu_chung.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/list_view_dien_dan.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/list_view_lich_kham_da_hoan_thanh.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/list_view_lich_kham_da_huy.xml" value="0.1796875" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/nut_them_cua_dien_dan.xml" value="0.10925925925925926" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/tab_da_hoan_thanh.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/test.xml" value="0.1796875" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/test_thu.xml" value="0.1796875" />

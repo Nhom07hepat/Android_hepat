@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+    <ImageButton
+        android:id="@+id/imbtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+    <TextView
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:textSize="19dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Giải pháp y tế thông minh"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:textSize="19dp"
+        android:text=" - Phù hợp với tình hình dịch bệnh hiện nay \n
+- Tiết kiệm thời gian  \n
+- Truy cập dễ dàng \n
+- Đơn giản hóa quyền truy cập vào dữ liệu y tế điện tử \n "
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+/>
+    <TextView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:textSize="19dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Các chức năng của ứng dụng Hepat"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_margin="10dp"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="\n
+- Đặt lịch khám bệnh\n
+- Tư vấn\n
+- Bệnh án\n
+- Diễn đàn\n
+ "/>
+
+</LinearLayout>

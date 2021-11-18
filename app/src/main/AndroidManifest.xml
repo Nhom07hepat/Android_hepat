@@ -12,13 +12,16 @@
         android:theme="@style/Theme.GiaodienTrangChu">
         <activity
             android:name=".MainActivity"
-            android:hardwareAccelerated="false"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="false" />
+        <activity
+            android:name=".Activity_Binhluan"
+            android:exported="true"
+            android:hardwareAccelerated="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ThongBaoUongThuoc"
@@ -54,16 +57,14 @@
             android:exported="false" />
         <activity
             android:name=".DienDan"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".LichKham"
             android:exported="false" />
         <activity
             android:name=".TrangUser"
             android:exported="true"
-            android:hardwareAccelerated="false"></activity>
+            android:hardwareAccelerated="false" />
         <activity
             android:name=".GioithieuveHepat"
             android:exported="false"

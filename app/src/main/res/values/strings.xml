@@ -55,11 +55,15 @@
     <string name="doituong_y3">Đặc biệt, ứng dụng còn lưu trữ được đơn thuốc cũng như hồ sơ bệnh án để theo dõi tình trạng sức khỏe.</string>
     <string name="chuchnang">Các chức năng của ứng dụng Hepat</string>
     <string name="chucnang_y1">- Đặt lịch khám bệnh</string>
-    <string name="chucnang_y2">- Tư vấm</string>
+    <string name="chucnang_y2">- Tư vấn</string>
     <string name="chucnang_y3">- Bệnh án</string>
     <string name="chucnang_y4">- Diễn đàn</string>
+    <string name="chitiet_y1">Cho phép bệnh nhân đặt lịch khám bệnh ở các bệnh viện khắp cả nước theo khung giờ và ngày mà  mong muốn. Bên cạnh đó khi gặp các vấn đề về sức khỏe, bệnh nhân có thể tham khảo thêm thông tin về tình trạng của mình.
+</string>
+    <string name="chitiet_y3">Ngoài ra, mọi thắc mắc của bệnh nhân luôn được giải đáp ở diễn đàn - nơi mọi người cùng nhau chia sẻ.
+</string>
     <string name="chitiet">Chi tiết ứng dụng</string>
-    <string name="chitiet_y1">Cho phép bệnh nhân đặt lịch khám bệnh ở các bệnh viện khắp cả nước theo khung giờ và ngày mà mong muốn. Bên cạnh đó khi gặp các vấn đề về sức khỏe, bệnh nhân có thể tham khảo thêm thông tin về tình trạng của mình.</string>
-    <string name="chitiet_y2">Nhờ vào chức năng bệnh án, sau khi khám bệnh xong bệnh nhân có thể xem lại được các danh mục như: Chẩn đoán của bác sĩ, loại thuốc kê theo toa, bác sĩ thực hiện,…</string>
-    <string name="chitiet_y3">Ngoài ra, mọi thắc mắc của bệnh nhân luôn được giải đáp ở diễn đàn - nơi mọi người cùng nhau chia sẻ.</string>
+    <string name="chitiet_y2">Nhờ vào chức năng bệnh án, sau khi khám bệnh xong bệnh nhân có thể xem lại được các danh mục như: Chẩn đoán của bác sĩ, loại thuốc kê theo toa, bác sĩ thực hiện,…
+</string>
+
 </resources>
