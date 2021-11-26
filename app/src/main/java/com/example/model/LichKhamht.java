@@ -1,54 +1,58 @@
 package com.example.model;
 
-public class LichKhamht {
-    private String hospitalName,hospitalTime,hospitalDate,hospitalXN;
-    private int hositalThumb;
+import java.io.Serializable;
 
-    public LichKhamht(String hospitalName, String hospitalTime, String hospitalDate, String hospitalXN, int hositalThumb) {
-        this.hospitalName = hospitalName;
-        this.hospitalTime = hospitalTime;
-        this.hospitalDate = hospitalDate;
-        this.hospitalXN = hospitalXN;
-        this.hositalThumb = hositalThumb;
+public class LichKhamht implements Serializable {
+    int id;
+    String name;
+    String date;
+
+    public int getId() {
+        return id;
     }
 
-    public String getHospitalName() {
-        return hospitalName;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setHospitalName(String hospitalName) {
-        this.hospitalName = hospitalName;
+    public String getName() {
+        return name;
     }
 
-    public String getHospitalTime() {
-        return hospitalTime;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setHospitalTime(String hospitalTime) {
-        this.hospitalTime = hospitalTime;
+    public String getDate() {
+        return date;
     }
 
-    public String getHospitalDate() {
-        return hospitalDate;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public void setHospitalDate(String hospitalDate) {
-        this.hospitalDate = hospitalDate;
+    public String getTime() {
+        return time;
     }
 
-    public String getHospitalXN() {
-        return hospitalXN;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public void setHospitalXN(String hospitalXN) {
-        this.hospitalXN = hospitalXN;
+    public LichKhamht(String name, String date, String time) {
+        this.name = name;
+        this.date = date;
+        this.time = time;
     }
 
-    public int getHositalThumb() {
-        return hositalThumb;
+    public LichKhamht(int id, String name, String date, String time) {
+        this.id = id;
+        this.name = name;
+        this.date = date;
+        this.time = time;
     }
 
-    public void setHositalThumb(int hositalThumb) {
-        this.hositalThumb = hositalThumb;
-    }
+    String time;
+
+
 }

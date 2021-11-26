@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#34D16D"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.08"
+                tools:layout_editor_absoluteX="1dp">
+
+                <ImageButton
+                    android:id="@+id/imbtnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#34D16D"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.056"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/txtTital"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background=" #34D16D"
+                    android:gravity="center"
+                    android:text="Chỉnh sửa lịch khám"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:layout_gravity="center"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.049"
+                    tools:layout_editor_absoluteX="1dp" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imvThongTin"
+                android:layout_width="370dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="108dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/duongvien_goctron"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:id="@+id/txtNameBV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Bệnh viện Đại học Y dược"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtAddressBV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="201 Nguyễn Chí Thanh, P.12, Q.5"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="192dp"
+                    android:layout_marginBottom="900dp"
+                    android:justificationMode="inter_word"
+                    android:text="028 3855 4269"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="304dp"
+                android:justificationMode="inter_word"
+                android:text="Chọn ngày"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtNgayDat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="304dp"
+                android:justificationMode="inter_word"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="370dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="364dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/background_calendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.512"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="364dp"
+                android:firstDayOfWeek="2"
+                android:focusedMonthDateColor="#34D16D"
+                android:foregroundTint="#34D16D"
+                android:maxDate="31/12/9999"
+                android:minDate="01/06/2021"
+                android:selectedWeekBackgroundColor="#34D16D"
+                android:unfocusedMonthDateColor="#34D16D"
+                android:weekNumberColor="#34D16D "
+                android:weekSeparatorLineColor="#34D16D "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="676dp"
+                android:justificationMode="inter_word"
+                android:text="Chọn giờ"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtGioDat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="220dp"
+                android:layout_marginTop="676dp"
+                android:justificationMode="inter_word"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="370dp"
+                android:layout_height="320dp"
+                android:layout_marginTop="736dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitStart"
+                android:src="@drawable/khunggio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.487"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="784dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="7h - 8h"
+                android:textColor="#34D16D"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="68dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="9h - 10h"
+                android:textColor="#34D16D"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn1" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="68dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="13h - 14H"
+                android:textColor="#34D16D"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn2" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="68dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="15h - 16h"
+                android:textColor="#34D16D"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn3" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="784dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="8h - 9h"
+                android:textColor="#34D16D"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="68dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="10h - 11h"
+                android:textColor="#34D16D"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn5" />
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="68dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="9h - 10h"
+                android:textColor="#34D16D"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn6" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="228dp"
+                android:layout_marginTop="72dp"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:text="16h - 17h"
+                android:textColor="#34D16D"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/btn7" />
+
+            <Button
+                android:id="@+id/btnChinhSuaLK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="1100dp"
+                android:backgroundTint="#34D16D"
+                android:gravity="center"
+                android:text="Chỉnh Sửa"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

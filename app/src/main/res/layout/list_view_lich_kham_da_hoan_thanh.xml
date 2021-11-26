@@ -1,57 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_gravity="center">
+    app:cardCornerRadius="8dp"
+    android:elevation="8dp"
+    android:layout_margin="20dp"
+    >
     <ImageView
-        android:id="@+id/imvKhunglichkhamdahoanthanh"
+        android:id="@+id/imvKhunglichkhamhientai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/nen_9"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="10dp"/>
     <TextView
         android:id="@+id/txtHospitalNamedaht"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bệnh viện Từ Dũ"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="@id/imvKhunglichkhamdahoanthanh"
-        app:layout_constraintLeft_toLeftOf="@id/imvKhunglichkhamdahoanthanh"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="25dp"
+        android:textSize="20sp"
+
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"
         android:textStyle="bold"/>
     <TextView
         android:id="@+id/txtHospitalTimedaht"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:text="10:00 AM"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:drawableLeft="@drawable/ic_baseline_access_time_24"
-        app:layout_constraintTop_toBottomOf="@id/txtHospitalNamedaht"
-        app:layout_constraintLeft_toLeftOf="@id/imvKhunglichkhamdahoanthanh"
-        android:layout_marginTop="43dp"
+        app:layout_constraintTop_toBottomOf="@id/txtHospitalNameht"
+        app:layout_constraintLeft_toLeftOf="@id/imvKhunglichkhamhientai"
+        android:layout_marginTop="100dp"
         android:layout_marginLeft="40dp"
         android:gravity="center"
         />
     <TextView
         android:id="@+id/txtHospitalDatedaht"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:text="12/09/21"
         android:drawableLeft="@drawable/ic_baseline_date_range_24"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/txtHospitalNamedaht"
-
-        app:layout_constraintRight_toRightOf="@id/imvKhunglichkhamdahoanthanh"
-        android:layout_marginTop="40dp"
-
-        android:layout_marginRight="40dp"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/txtHospitalNameht"
+        app:layout_constraintLeft_toRightOf="@id/txtHospitalTimeht"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="200dp"
         android:gravity="center"
         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

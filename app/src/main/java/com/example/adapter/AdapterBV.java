@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -57,6 +58,12 @@ public class AdapterBV extends RecyclerView.Adapter<AdapterBV.BVViewHolder>{
                 onclickDetail(benhVien);
             }
         });
+        holder.btnBooking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onclickDetail(benhVien);
+            }
+        });
     }
     public void filter(String svSearch){
         int s = svSearch.length();
@@ -102,6 +109,7 @@ public class AdapterBV extends RecyclerView.Adapter<AdapterBV.BVViewHolder>{
         private TextView txtName;
         private TextView txtAddress;
         private RelativeLayout layoutItem;
+        Button btnBooking;
 
         public BVViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -109,6 +117,7 @@ public class AdapterBV extends RecyclerView.Adapter<AdapterBV.BVViewHolder>{
             txtName = itemView.findViewById(R.id.txtName);
             txtAddress = itemView.findViewById(R.id.txtAddress);
             layoutItem = itemView.findViewById(R.id.layout_item);
+            btnBooking = itemView.findViewById(R.id.btnBooking);
         }
     }
 }

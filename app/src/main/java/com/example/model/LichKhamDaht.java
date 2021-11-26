@@ -1,35 +1,57 @@
 package com.example.model;
 
-public class LichKhamDaht {
-    private String HospitalNamedht, HospitalTimedht, HospitalDatedht;
+import java.io.Serializable;
 
-    public LichKhamDaht(String hospitalNamedht, String hospitalTimedht, String hospitalDatedht) {
-        HospitalNamedht = hospitalNamedht;
-        HospitalTimedht = hospitalTimedht;
-        HospitalDatedht = hospitalDatedht;
+public class LichKhamDaht implements Serializable {
+    int id;
+    String name;
+    String date;
+
+    public int getId() {
+        return id;
     }
 
-    public String getHospitalNamedht() {
-        return HospitalNamedht;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setHospitalNamedht(String hospitalNamedht) {
-        HospitalNamedht = hospitalNamedht;
+    public String getName() {
+        return name;
     }
 
-    public String getHospitalTimedht() {
-        return HospitalTimedht;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setHospitalTimedht(String hospitalTimedht) {
-        HospitalTimedht = hospitalTimedht;
+    public String getDate() {
+        return date;
     }
 
-    public String getHospitalDatedht() {
-        return HospitalDatedht;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public void setHospitalDatedht(String hospitalDatedht) {
-        HospitalDatedht = hospitalDatedht;
+    public String getTime() {
+        return time;
     }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public LichKhamDaht(String name, String date, String time) {
+        this.name = name;
+        this.date = date;
+        this.time = time;
+    }
+
+    public LichKhamDaht(int id, String name, String date, String time) {
+        this.id = id;
+        this.name = name;
+        this.date = date;
+        this.time = time;
+    }
+
+    String time;
+
 }

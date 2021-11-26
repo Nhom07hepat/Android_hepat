@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp"
-    android:background="@drawable/khunggio">
+    android:background="@drawable/khunggio"
+    android:paddingTop="10dp"
+    android:layout_marginLeft="10dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imvBenhVien"

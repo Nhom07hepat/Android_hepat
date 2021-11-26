@@ -6,60 +6,62 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.giaodientrangchu.R;
+import com.example.model.LichKhamDaHuy;
 import com.example.model.LichKhamDaht;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class LichKhamdahtAdapter extends BaseAdapter {
-    Activity context;
-    int item_lisview;
-    List<LichKhamDaht> lichKhamDahtList;
 
-    public LichKhamdahtAdapter(Activity context, int item_lisview, List<LichKhamDaht> lichKhamDahtList) {
+public class LichKhamdahtAdapter extends RecyclerView.Adapter<LichKhamdahtAdapter.LichKhamDaHtVH>  {
+    ArrayList<LichKhamDaht> lichKhamDahts;
+    Context context;
+
+    public LichKhamdahtAdapter(ArrayList<LichKhamDaht> lichKhamDahts, Context context) {
+        this.lichKhamDahts = lichKhamDahts;
         this.context = context;
-        this.item_lisview = item_lisview;
-        this.lichKhamDahtList = lichKhamDahtList;
+    }
+
+    @NonNull
+    @Override
+    public LichKhamDaHtVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View view = inflater.inflate(R.layout.list_view_lich_kham_da_hoan_thanh,parent,false);
+        LichKhamDaHtVH lhtvh = new LichKhamDaHtVH(view);
+        return lhtvh;
     }
 
     @Override
-    public int getCount() {
-        return lichKhamDahtList.size();
+    public void onBindViewHolder(@NonNull LichKhamDaHtVH holder, int position) {
+        LichKhamDaht l2 = lichKhamDahts.get(position);
+        holder.txtName.setText(l2.getName());
+        holder.txtDate.setText(l2.getDate());
+        holder.txtTime.setText(l2.getTime());
     }
 
     @Override
-    public Object getItem(int i) {
-        return lichKhamDahtList.get(i);
+    public int getItemCount() {
+        return lichKhamDahts.size();
     }
 
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
+    class LichKhamDaHtVH extends RecyclerView.ViewHolder {
+        TextView txtName, txtDate, txtTime;
+        public LichKhamDaHtVH(@NonNull View itemView) {
+            super(itemView);
+            txtName = itemView.findViewById(R.id.txtHospitalNamedaht);
+            txtDate = itemView.findViewById(R.id.txtHospitalDatedaht);
+            txtTime = itemView.findViewById(R.id.txtHospitalTimedaht);
 
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        ViewHolder holder=null;
-        if(view==null){
-            holder=new ViewHolder();
-            LayoutInflater inflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view=inflater.inflate(item_lisview,null);
-            holder.txtName=view.findViewById(R.id.txtHospitalNamedaht);
-            holder.txtTime=view.findViewById(R.id.txtHospitalTimedaht);
-            holder.txtDate=view.findViewById(R.id.txtHospitalDatedaht);
-        }else{
-            holder= (ViewHolder) view.getTag();
+
         }
-        LichKhamDaht lichKhamDaht=lichKhamDahtList.get(i);
-        holder.txtName.setText(lichKhamDaht.getHospitalNamedht());
-        holder.txtTime.setText(lichKhamDaht.getHospitalTimedht());
-        holder.txtDate.setText(lichKhamDaht.getHospitalDatedht());
 
-        return view;
-    }
-    public  static class ViewHolder{
-        TextView txtName, txtTime, txtDate;
     }
 }

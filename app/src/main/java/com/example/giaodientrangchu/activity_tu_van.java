@@ -1,6 +1,7 @@
 package com.example.giaodientrangchu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,61 +27,62 @@ import com.example.fragment.tuvan_fragment4;
 import com.example.fragment.tuvan_fragment5;
 
 
-public class activity_tu_van extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Spinner spinSearch;
-    String[] TrieuChungs = new String[]{
-            "Buồn nôn", "Bị đau cơ khi căng người", "Bị choáng khi đứng lên đột ngột",
-            "Đau thắt ngực trái", "Đau vùng thuợng vị", "Choáng váng"
-    };
+public class activity_tu_van extends AppCompatActivity {
+    SearchView svSearch;
+    ListView lvTC;
+    String[] trieuchungs = {"Buồn nôn", "Bị đau cơ khi căng người", "Bị choáng khi đứng lên đột ngột", "Đau thắt ngực trái",
+            "Đau vùng thuợng vị", "Choáng váng"};
+    ArrayAdapter<String> adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tu_van);
+        svSearch = findViewById(R.id.svSearch);
+        lvTC = findViewById(R.id.lvTC);
 
-        spinSearch = findViewById(R.id.spinSearch);
-        spinSearch.setOnItemSelectedListener(this);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, TrieuChungs);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinSearch.setAdapter(adapter);
+        svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
 
-    }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter = new ArrayAdapter<String>(activity_tu_van.this, android.R.layout.simple_list_item_activated_1, trieuchungs);
+                lvTC.setAdapter(adapter);
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        lvTC.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String text = parent.getItemAtPosition(position).toString();
+                Fragment fragment;
+                if (text.equals("Buồn nôn")) {
+                    fragment = new tuvan_fragment();
+                } else if (text.equals("Bị đau cơ khi căng người")) {
+                    fragment = new tuvan_fragment1();
 
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String text = adapterView.getItemAtPosition(i).toString();
-        Fragment fragment;
-        if(text.equals("Buồn nôn")){
-            fragment = new tuvan_fragment();
-        }
-        else if(text.equals("Bị đau cơ khi căng người")){
-            fragment = new tuvan_fragment1();
-
-        }
-        else if(text.equals("Bị choáng khi đứng lên đột ngột")){
-            fragment = new tuvan_fragment2();
-        }
-        else if(text.equals("Đau thắt ngực trái")){
-            fragment = new tuvan_fragment3();
-        }
-        else if(text.equals("Đau vùng thuợng vị")){
-            fragment = new tuvan_fragment4();
-        }
-        else if(text.equals("Choáng váng")){
-            fragment = new tuvan_fragment5();
-        }
-        else {
-            fragment = new BlankFragment();
-        }
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.fragment,fragment);
-        transaction.commit();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
+                } else if (text.equals("Bị choáng khi đứng lên đột ngột")) {
+                    fragment = new tuvan_fragment2();
+                } else if (text.equals("Đau thắt ngực trái")) {
+                    fragment = new tuvan_fragment3();
+                } else if (text.equals("Đau vùng thuợng vị")) {
+                    fragment = new tuvan_fragment4();
+                } else if (text.equals("Choáng váng")) {
+                    fragment = new tuvan_fragment5();
+                } else {
+                    fragment = new BlankFragment();
+                }
+                FragmentManager manager = getSupportFragmentManager();
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.replace(R.id.fragment, fragment);
+                transaction.commit();
+            }
+        });
 
     }
 }

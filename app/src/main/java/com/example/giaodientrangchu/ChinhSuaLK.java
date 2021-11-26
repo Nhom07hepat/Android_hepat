@@ -1,7 +1,9 @@
 package com.example.giaodientrangchu;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,44 +11,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import com.example.model.LichKhamht;
 
-import com.example.model.BenhVien;
-
-public class DatLich2_Activity extends AppCompatActivity {
+public class ChinhSuaLK extends AppCompatActivity {
     private CalendarView calendarView;
-    private TextView txtNgayDat, txtGioDat;
-    private Button btnLich, btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
+    int id;
+    private TextView txtName, txtNgayDat, txtGioDat;
+    private Button btnCS, btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
     Dialog dialog;
-public static final String Bv = "Bệnh viện ";
-public static final String Ngaydat = "Ngày đặt";
-public static final String Giodat = "Giờ đặt";
-
+    public static final String Bv = "Bệnh viện ";
+    public static final String Ngaydat = "Ngày đặt";
+    public static final String Giodat = "Giờ đặt";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dat_lich2);
-        Bundle bundle = getIntent().getExtras();
-        if(bundle == null){
-            return;
-        }
-        BenhVien benhVien = (BenhVien) bundle.get("Benh vien");
-        ImageButton imbtnBenhVien = findViewById(R.id.imbtnBenhVien);
-        imbtnBenhVien.setImageResource(benhVien.getImvBenhVien());
-        TextView txtNameBV = findViewById(R.id.txtNameBV);
-        txtNameBV.setText(benhVien.getTxtName());
-        TextView txtAddressBV = findViewById(R.id.txtAddressBV);
-        txtAddressBV.setText(benhVien.getTxtAddress());
-
+        setContentView(R.layout.activity_chinh_sua_lk);
         calendarView = findViewById(R.id.calendarView);
+        txtName = findViewById(R.id.txtNameBV);
         txtNgayDat = findViewById(R.id.txtNgayDat);
         txtGioDat = findViewById(R.id.txtGioDat);
-        btnLich = findViewById(R.id.btnLich);
+        btnCS = findViewById(R.id.btnChinhSuaLK);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
@@ -56,7 +43,11 @@ public static final String Giodat = "Giờ đặt";
         btn7 = findViewById(R.id.btn7);
         btn8 = findViewById(R.id.btn8);
 
-
+        LichKhamht l = (LichKhamht) getIntent().getExtras().getSerializable("LichKham");
+        id = l.getId();
+        txtName.setText(l.getName());
+        txtNgayDat.setText(l.getDate());
+        txtGioDat.setText(l.getTime());
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -65,7 +56,7 @@ public static final String Giodat = "Giờ đặt";
                 txtNgayDat.setText(date);
             }
         });
-        
+
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +106,7 @@ public static final String Giodat = "Giờ đặt";
                 txtGioDat.setText("16h - 17h");
             }
         });
-        dialog = new Dialog(DatLich2_Activity.this);
+        dialog = new Dialog(ChinhSuaLK.this);
         dialog.setContentView(R.layout.custom_dialog);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.bg_dialog));
@@ -127,24 +118,29 @@ public static final String Giodat = "Giờ đặt";
         btnXacNhan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(DatLich2_Activity.this,"Xác nhận",Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
-                Intent intent = new Intent(DatLich2_Activity.this,thongtinBooking.class);
-                startActivity(intent);
-                String bv = txtNameBV.getText().toString();
-                String ngaydat = txtNgayDat.getText().toString();
-                String giodat = txtGioDat.getText().toString();
-                truyenDL(bv,ngaydat,giodat);
+                String name = txtName.getText().toString().trim();
+                String date = txtNgayDat.getText().toString().trim();
+                String time = txtGioDat.getText().toString().trim();
+                LichKhamht l = new LichKhamht(id, name,date,time);
+
+                DBBooking dbBooking = new DBBooking(ChinhSuaLK.this);
+                int result = dbBooking.updateLK(l);
+                if(result >0){
+                    Toast.makeText(ChinhSuaLK.this,"Updated",Toast.LENGTH_SHORT).show();
+                    finish();
+                }else {
+                    Toast.makeText(ChinhSuaLK.this,"Failed",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         btnHuy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(DatLich2_Activity.this,"Hủy",Toast.LENGTH_SHORT).show();
+                Toast.makeText(ChinhSuaLK.this,"Hủy",Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
             }
         });
-        btnLich.setOnClickListener(new View.OnClickListener() {
+        btnCS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.show();
@@ -153,13 +149,5 @@ public static final String Giodat = "Giờ đặt";
         });
     }
 
-
-    public void truyenDL(String bv, String ngaydat, String giodat){
-        Intent intent = new Intent(DatLich2_Activity.this,thongtinBooking.class);
-        intent.putExtra(Bv,bv);
-        intent.putExtra(Ngaydat,ngaydat);
-        intent.putExtra(Giodat,giodat);
-        startActivity(intent);
-    }
 
 }

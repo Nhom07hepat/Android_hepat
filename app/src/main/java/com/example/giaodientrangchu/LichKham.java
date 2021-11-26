@@ -1,12 +1,15 @@
 package com.example.giaodientrangchu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TabHost;
 
@@ -21,7 +24,7 @@ import com.example.model.LichKhamht;
 import java.util.ArrayList;
 
 public class LichKham extends AppCompatActivity {
-    ListView lvLichkhamht, lvLichKhamdaht, lvLichKhamdahuy;
+    RecyclerView reclichkhamht, reclichkhamhuy,reclichkhamdaht;
     ArrayList<LichKhamht> lichKhamhts;
     ArrayList<LichKhamDaht> lichKhamDahts;
     ArrayList<LichKhamDaHuy> lichKhamDaHuys;
@@ -29,19 +32,46 @@ public class LichKham extends AppCompatActivity {
     LichKhamdahtAdapter lichKhamdahtAdapter;
     LichKhamAdapter adapter;
     ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan;
-
-
+    ImageButton imbBack;
+//
+//
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lich_kham);
-        
+
         linkView();
         loadTab();
-        initData();
-        loadData();
+//        initData();
+//        loadData();
         addEvents();
+        DB_HUY db_huy = new DB_HUY(this);
+        lichKhamDaHuys = db_huy.getAllLichKhamht();
+        lichKhamDaHuyApdater = new LichKhamDaHuyApdater(lichKhamDaHuys,this);
+        reclichkhamhuy.setAdapter(lichKhamDaHuyApdater);
+        LinearLayoutManager layout = new LinearLayoutManager(this);
+        layout.setOrientation(RecyclerView.VERTICAL);
+        reclichkhamhuy.setLayoutManager(layout);
 
+        DB_LichHT db_lichHT = new DB_LichHT(this);
+        lichKhamDahts = db_lichHT.getAllLichKhamht();
+        lichKhamdahtAdapter = new LichKhamdahtAdapter(lichKhamDahts,this);
+        reclichkhamdaht.setAdapter(lichKhamdahtAdapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
+        reclichkhamdaht.setLayoutManager(linearLayoutManager);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        DBBooking dbBooking = new DBBooking(this);
+        lichKhamhts = dbBooking.getAllLichKhamht();
+        adapter = new LichKhamAdapter(lichKhamhts,this);
+        reclichkhamht.setAdapter(adapter);
+        LinearLayoutManager layout = new LinearLayoutManager(this);
+        layout.setOrientation(RecyclerView.VERTICAL);
+        reclichkhamht.setLayoutManager(layout);
 
     }
 
@@ -68,7 +98,13 @@ public class LichKham extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        imbBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LichKham.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void loadTab() {
@@ -89,46 +125,50 @@ public class LichKham extends AppCompatActivity {
         tab.addTab(spec);
         tab.setCurrentTab(0);
     }
-
-    private void loadData() {
-        adapter=new LichKhamAdapter(this,R.layout.list_view_lich_kham_hien_tai,lichKhamhts);
-        lvLichkhamht.setAdapter(adapter);
-
-        lichKhamdahtAdapter=new LichKhamdahtAdapter(this,R.layout.list_view_lich_kham_da_hoan_thanh,lichKhamDahts);
-        lvLichKhamdaht.setAdapter(lichKhamdahtAdapter);
-
-        lichKhamDaHuyApdater=new LichKhamDaHuyApdater(this,R.layout.list_view_lich_kham_da_huy,lichKhamDaHuys);
-        lvLichKhamdahuy.setAdapter(lichKhamDaHuyApdater);
-    }
-
-    private void initData() {
-        lichKhamhts=new ArrayList<>();
-        lichKhamhts.add(new LichKhamht("Bệnh viện Từ Dũ","10:00 AM","12/09/21","Đã xác nhận",R.drawable.ic_baseline_check_24));
-        lichKhamhts.add(new LichKhamht("Bệnh viện Y dược","8:00 AM","12/10/21","Chưa xác nhận",R.drawable.ic_baseline_close_24));
-        lichKhamhts.add(new LichKhamht("Bệnh viện Chợ Rẫy","14:00 PM","30/11/21","Đã xác nhận",R.drawable.ic_baseline_check_24));
-
-        lichKhamDahts=new ArrayList<>();
-        lichKhamDahts.add(new LichKhamDaht("Bệnh viện Từ Dũ","10:00 AM","12/09/21"));
-        lichKhamDahts.add(new  LichKhamDaht("Bệnh viện Y dươc","8:00 AM","12/10/21"));
-        lichKhamDahts.add(new LichKhamDaht("Bệnh viện Chợ Rẫy","14:00 PM","30/11/21"));
-
-        lichKhamDaHuys=new ArrayList<>();
-        lichKhamDaHuys.add(new LichKhamDaHuy("Bệnh viện Từ Dũ","10:00 AM","12/09/21"));
-        lichKhamDaHuys.add(new LichKhamDaHuy("Bệnh viện Y dươc","8:00 AM","12/10/21"));
-        lichKhamDaHuys.add(new LichKhamDaHuy("Bệnh viện Chợ Rẫy","14:00 PM","30/11/21"));
-
-    }
-
-
+//
+//    private void loadData() {
+//        adapter=new LichKhamAdapter(this,R.layout.list_view_lich_kham_hien_tai,lichKhamhts);
+//        lvLichkhamht.setAdapter(adapter);
+//
+//        lichKhamdahtAdapter=new LichKhamdahtAdapter(this,R.layout.list_view_lich_kham_da_hoan_thanh,lichKhamDahts);
+//        lvLichKhamdaht.setAdapter(lichKhamdahtAdapter);
+//
+//        lichKhamDaHuyApdater=new LichKhamDaHuyApdater(this,R.layout.list_view_lich_kham_da_huy,lichKhamDaHuys);
+//        lvLichKhamdahuy.setAdapter(lichKhamDaHuyApdater);
+//    }
+//
+//    private void initData() {
+//        lichKhamhts=new ArrayList<>();
+//        lichKhamhts.add(new LichKhamht("Bệnh viện Từ Dũ","10:00 AM","12/09/21","Đã xác nhận",R.drawable.ic_baseline_check_24));
+//        lichKhamhts.add(new LichKhamht("Bệnh viện Y dược","8:00 AM","12/10/21","Chưa xác nhận",R.drawable.ic_baseline_close_24));
+//        lichKhamhts.add(new LichKhamht("Bệnh viện Chợ Rẫy","14:00 PM","30/11/21","Đã xác nhận",R.drawable.ic_baseline_check_24));
+//
+//        lichKhamDahts=new ArrayList<>();
+//        lichKhamDahts.add(new LichKhamDaht("Bệnh viện Từ Dũ","10:00 AM","12/09/21"));
+//        lichKhamDahts.add(new  LichKhamDaht("Bệnh viện Y dươc","8:00 AM","12/10/21"));
+//        lichKhamDahts.add(new LichKhamDaht("Bệnh viện Chợ Rẫy","14:00 PM","30/11/21"));
+//
+//        lichKhamDaHuys=new ArrayList<>();
+//        lichKhamDaHuys.add(new LichKhamDaHuy("Bệnh viện Từ Dũ","10:00 AM","12/09/21"));
+//        lichKhamDaHuys.add(new LichKhamDaHuy("Bệnh viện Y dươc","8:00 AM","12/10/21"));
+//        lichKhamDaHuys.add(new LichKhamDaHuy("Bệnh viện Chợ Rẫy","14:00 PM","30/11/21"));
+//
+//    }
+//
+//
     private void linkView() {
-
-        lvLichkhamht=findViewById(R.id.lvlichkhamht);
-
-        lvLichKhamdaht=findViewById(R.id.lvlichkhamdaht);
-        lvLichKhamdahuy=findViewById(R.id.lvlichkhamdahuy);
+//
+//        lvLichkhamht=findViewById(R.id.lvlichkhamht);
+//
+//        lvLichKhamdaht=findViewById(R.id.lvlichkhamdaht);
+//        lvLichKhamdahuy=findViewById(R.id.lvlichkhamdahuy);
+        reclichkhamht = findViewById(R.id.reclichkhamht);
+        reclichkhamhuy = findViewById(R.id.reclichkhamdahuy);
+        reclichkhamdaht = findViewById(R.id.reclichkhamdaht);
         imbtnHomePage = findViewById(R.id.imbtnHomePage);
         imbtnLichKham = findViewById(R.id.imbtnLichKham);
         imbtnThongBao = findViewById(R.id.imbtnThongBao);
         imbtnTaiKhoan = findViewById(R.id.imbtnTaikhoan);
+        imbBack = findViewById(R.id.imbtnBack);
     }
 }
