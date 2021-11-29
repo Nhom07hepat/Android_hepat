@@ -3,6 +3,7 @@ package com.example.adapter;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.giaodientrangchu.Activity_Binhluan;
+import com.example.giaodientrangchu.DienDan;
+import com.example.giaodientrangchu.LichKham;
+import com.example.giaodientrangchu.MainActivity;
 import com.example.giaodientrangchu.R;
 import com.example.model.Postdiendan;
 
@@ -54,6 +59,7 @@ public class DiendanAdapter extends BaseAdapter {
             holder.txtUserTime=view.findViewById(R.id.txtThoiGian);
             holder.txtUserQuestion=view.findViewById(R.id.txtQuestion);
             holder.imbtnMore=view.findViewById(R.id.imbtnMore);
+            holder.btnComment=view.findViewById(R.id.btnCommentDienDan);
             view.setTag(holder);
 
         } else {
@@ -63,6 +69,13 @@ public class DiendanAdapter extends BaseAdapter {
         Postdiendan postdiendan=postdiendanList.get(i);
         holder.txtUserName.setText(postdiendan.getUserName());
         holder.txtUserTime.setText(postdiendan.getUserTime());
+        holder.btnComment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, Activity_Binhluan.class);
+                context.startActivity(intent);
+            }
+        });
         holder.txtUserQuestion.setText(postdiendan.getUserQuestion());
         holder.imbtnMore.setOnClickListener(new View.OnClickListener() {
             @Override

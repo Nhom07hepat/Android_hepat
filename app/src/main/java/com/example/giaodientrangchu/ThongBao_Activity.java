@@ -76,7 +76,6 @@ public class ThongBao_Activity extends AppCompatActivity {
     private void loadData() {
         arrayList = new ArrayList<>();
         arrayList.add(new ThongBao(R.drawable.tb_lich,"Bạn có một lịch khám","21/11/2021","10:00 AM","13:19"));
-        arrayList.add(new ThongBao(R.drawable.vithuoc,"Uống thuốc bạn ơi","21/11/2021","8:00 AM","12:00"));
         arrayList.add(new ThongBao(R.drawable.hopital,"Một bệnh viện được thêm vào Hepat","21/11/2021","3:00 PM","13:19"));
         arrayList.add(new ThongBao(R.drawable.tinmoi,"Một tin mới trên diễn đàn","21/11/2021","4:10 PM","13:19"));
 
