@@ -65,5 +65,17 @@
     <string name="chitiet">Chi tiết ứng dụng</string>
     <string name="chitiet_y2">Nhờ vào chức năng bệnh án, sau khi khám bệnh xong bệnh nhân có thể xem lại được các danh mục như: Chẩn đoán của bác sĩ, loại thuốc kê theo toa, bác sĩ thực hiện,…
 </string>
+    <string name="lido0">☘☘ TẠI SAO NÊN TIÊM VACCINE CÀNG SỚM CÀNG TỐT? ☘☘ </string>
+    <string name="lido1">✅ Vắc-xin ngừa COVID 19 có hiệu quả và có thể giúp giảm nguy cơ nhiễm và lây lan vi-rút gây bệnh COVID-19.</string>
+    <string name="lido2">✅ Vắc-xin ngừa COVID-19 còn giúp trẻ em và người lớn khỏi bị bệnh nặng ngay cả khi họ bị mắc COVID-19. </string>
+    <string name="lido3">✅ Mặc dù COVID-19 ở trẻ em có xu hướng nhẹ hơn so với người lớn, nhưng có thể khiến trẻ bị bệnh nặng, phải nhập viện và một số trẻ thậm chí đã tử vong. Trẻ có các bệnh lý nền có nhiều nguy cơ bị bệnh nặng hơn so với trẻ em không có các bệnh lý nền.</string>
+    <string name="lido4">✅ Cho trẻ từ 5 tuổi trở lên đi tiêm chủng có thể giúp bảo vệ trẻ khỏi các biến chứng nghiệm trọng về ngắn và dài hạn. </string>
+    <string name="lido5">✅ Việc tiêm chủng cho tất cả mọi người từ 5 tuổi trở lên có thể bảo vệ các gia đình và cộng đồng, bao gồm cả bạn bè và gia đình không đủ điều kiện để tiêm chủng và những người có nhiều nguy cơ mắc bệnh nặng do COVID-19.</string>
+    <string name="td5k">☘☘ THÔNG ĐIỆP 5K ☘☘</string>
+    <string name="td5k1">☘️ KHẨU TRANG: Đeo khẩu trang vải thường xuyên tại nơi công cộng, nơi tập trung đông người; đeo khẩu trang y tế tại các cơ sở y tế, khu cách ly. </string>
+    <string name="td5k2">☘️ KHỬ KHUẨN: Rửa tay thường xuyên bằng xà phòng hoặc dung dịch sát khuẩn tay. Vệ sinh các bề mặt/ vật dụng thường xuyên tiếp xúc (tay nắm cửa, điện thoại, máy tính bảng, mặt bàn, ghế…). Giữ vệ sinh, lau rửa và để nhà cửa thông thoáng. </string>
+    <string name="td5k3">☘️ KHOẢNG CÁCH: Giữ khoảng cách khi tiếp xúc với người khác.  </string>
+    <string name="td5k4">☘️ KHAI BÁO Y TẾ: thực hiện khai báo y tế trên App NCOVI;\ncài đặt ứng dụng BlueZone tại địa chỉ https://www.bluezone.gov.vn để được cảnh báo nguy cơ lây nhiễm COVID-19.\n Khi có dấu hiệu sốt, ho, khó thở hãy gọi điện cho đường dây nóng của Bộ Y tế 19009095 hoặc đường dây nóng của y tế địa phương để được tư vấn, hỗ trợ, hướng dẫn đi khám bệnh đảm bảo an toàn. </string>
+    <string name="td5k5">☘️ KHÔNG TỤ TẬP đông người.</string>
 
 </resources>
