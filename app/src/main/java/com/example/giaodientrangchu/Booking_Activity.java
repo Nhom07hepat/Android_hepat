@@ -3,6 +3,7 @@ package com.example.giaodientrangchu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Booking_Activity extends AppCompatActivity implements SearchView.OnQueryTextListener{
+    ImageButton imbtnBack;
     private RecyclerView rcvBV;
     private AdapterBV adapterBV;
     private SearchView svSearch;
@@ -28,17 +30,27 @@ public class Booking_Activity extends AppCompatActivity implements SearchView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
+        imbtnBack=findViewById(R.id.imbtnBack);
         rcvBV = findViewById(R.id.recBV);
         svSearch = findViewById(R.id.svSearch);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcvBV.setLayoutManager(linearLayoutManager);
-
+        addEvents();
         adapterBV = new AdapterBV(this,getListBV());
         rcvBV.setAdapter(adapterBV);
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this,DividerItemDecoration.VERTICAL);
         rcvBV.addItemDecoration(itemDecoration);
         svSearch.setOnQueryTextListener(this);
 
+    }
+    private void addEvents() {
+        imbtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Booking_Activity.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private List<BenhVien> getListBV() {

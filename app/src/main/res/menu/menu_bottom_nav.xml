@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/home_menu"
+        android:title="@string/action_home" />
+    <item
+        android:id="@+id/action_lich"
+        android:icon="@drawable/lichmenu"
+        android:title="@string/action_lich" />
+    <item
+        android:id="@+id/action_qr"
+        android:iconTintMode="src_in"
+
+        android:icon="@drawable/qrcode"
+        android:title="" />
+    <item
+        android:id="@+id/action_thongbao"
+        android:icon="@drawable/bell_menu"
+        android:title="@string/action_thongbao" />
+    <item
+        android:id="@+id/action_taikhoan"
+        android:icon="@drawable/person_menu"
+        android:title="@string/action_taikhoan"
+        />
+</menu>

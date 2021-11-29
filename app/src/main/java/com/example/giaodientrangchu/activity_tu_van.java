@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -28,6 +29,7 @@ import com.example.fragment.tuvan_fragment5;
 
 
 public class activity_tu_van extends AppCompatActivity {
+    ImageButton imbtnBack;
     SearchView svSearch;
     ListView lvTC;
     String[] trieuchungs = {"Buồn nôn", "Bị đau cơ khi căng người", "Bị choáng khi đứng lên đột ngột", "Đau thắt ngực trái",
@@ -41,6 +43,15 @@ public class activity_tu_van extends AppCompatActivity {
         setContentView(R.layout.activity_tu_van);
         svSearch = findViewById(R.id.svSearch);
         lvTC = findViewById(R.id.lvTC);
+        imbtnBack=findViewById(R.id.imbtnBack);
+        imbtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(activity_tu_van.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
