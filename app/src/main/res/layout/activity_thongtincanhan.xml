@@ -184,14 +184,15 @@
         </LinearLayout>
 
             <Button
-                android:id="@+id/btnLuu"
+                android:id="@+id/btnCSTT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LƯU"
+                android:text="Chỉnh sửa thông tin"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:backgroundTint="#34D16D"
-                android:layout_marginLeft="300dp"/>
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"/>
 
     </LinearLayout>
 

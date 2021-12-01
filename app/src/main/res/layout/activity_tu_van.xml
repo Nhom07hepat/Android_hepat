@@ -67,7 +67,7 @@
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="70dp"
         android:layout_marginRight="80dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -83,7 +83,8 @@
             android:id="@+id/fragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.fragment.BlankFragment"/>
+            android:name="com.example.fragment.BlankFragment"
+            android:layout_marginTop="50dp"/>
 
     </LinearLayout>
 
