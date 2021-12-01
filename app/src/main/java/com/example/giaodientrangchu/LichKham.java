@@ -31,8 +31,7 @@ public class LichKham extends AppCompatActivity {
     LichKhamDaHuyApdater lichKhamDaHuyApdater;
     LichKhamdahtAdapter lichKhamdahtAdapter;
     LichKhamAdapter adapter;
-    ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan;
-    ImageButton imbBack;
+    ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan, imbtnBack;
 //
 //
     @Override
@@ -98,7 +97,7 @@ public class LichKham extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        imbBack.setOnClickListener(new View.OnClickListener() {
+        imbtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LichKham.this, MainActivity.class);
@@ -169,6 +168,6 @@ public class LichKham extends AppCompatActivity {
         imbtnLichKham = findViewById(R.id.imbtnLichKham);
         imbtnThongBao = findViewById(R.id.imbtnThongBao);
         imbtnTaiKhoan = findViewById(R.id.imbtnTaikhoan);
-        imbBack = findViewById(R.id.imbtnBack);
+        imbtnBack = findViewById(R.id.imbtnBack);
     }
 }

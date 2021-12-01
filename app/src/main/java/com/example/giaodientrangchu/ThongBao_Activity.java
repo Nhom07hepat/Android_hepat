@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -15,7 +16,7 @@ import com.example.adapter.AdapterTB;
 import java.util.ArrayList;
 
 public class ThongBao_Activity extends AppCompatActivity {
-    ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan;
+    ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan, imbtnBack;
     ListView lvTB;
     ArrayList<ThongBao> arrayList;
     AdapterTB adapterTB;
@@ -31,6 +32,14 @@ public class ThongBao_Activity extends AppCompatActivity {
     }
 
     private void addEvents() {
+
+        imbtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ThongBao_Activity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
        lvTB.setOnItemClickListener(new AdapterView.OnItemClickListener() {
            @Override
@@ -66,6 +75,7 @@ public class ThongBao_Activity extends AppCompatActivity {
 
     private void linkView() {
         lvTB = findViewById(R.id.lvTB);
+        imbtnBack = findViewById(R.id.imbtnBack);
         imbtnHomePage = findViewById(R.id.imbtnHomePage);
         imbtnLichKham = findViewById(R.id.imbtnLichKham);
         imbtnThongBao = findViewById(R.id.imbtnThongBao);
