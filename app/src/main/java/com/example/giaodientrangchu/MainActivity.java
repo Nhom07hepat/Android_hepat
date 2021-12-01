@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements RecyclerOnItemClick {
-    ImageButton imbtnDatlich,imbtnTuVan,imbtnBenhAn,imbtnDienDan,imbtnUser,imbtnHomePage,imbtnLichKham,imbtnThongBao,imbtnTaiKhoan;
+    ImageButton imbtnDatlich,imbtnTuVan,imbtnBenhAn,imbtnDienDan,imbtnUser,imbtnHomePage,imbtnLichKham,imbtnThongBao,imbtnTaiKhoan,imbtnBack,imbtn;
     Button btnXemthem;
     RecyclerView recycler_banner;
     List<Banner> bannerList;
@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
                 startActivity(intent);
             }
         });
+
         imbtnTuVan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

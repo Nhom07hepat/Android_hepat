@@ -13,43 +13,47 @@
         android:background="@null"
         android:src="@drawable/ic_baseline_arrow_back_24" />
     <TextView
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:textSize="19dp"
-        android:textColor="@color/black"
+        android:textColor="#f98"
         android:layout_height="wrap_content"
         android:text="Giải pháp y tế thông minh"
         android:textStyle="bold"/>
     <TextView
         android:layout_marginTop="25dp"
         android:layout_width="match_parent"
-        android:textSize="19dp"
-        android:text=" - Phù hợp với tình hình dịch bệnh hiện nay \n
-- Tiết kiệm thời gian  \n
-- Truy cập dễ dàng \n
-- Đơn giản hóa quyền truy cập vào dữ liệu y tế điện tử \n "
-        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:text=" ⭐ Phù hợp với tình hình dịch bệnh hiện nay \n
+⭐ Tiết kiệm thời gian  \n
+⭐ Truy cập dễ dàng \n
+⭐ Đơn giản hóa quyền truy cập vào dữ liệu \n       y tế điện tử \n "
+        android:textColor="#17A0B3"
         android:layout_height="wrap_content"
 />
-    <TextView
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:textSize="19dp"
-        android:textColor="@color/black"
-        android:layout_height="wrap_content"
-        android:text="Các chức năng của ứng dụng Hepat"
-        android:textStyle="bold"/>
-    <TextView
-        android:layout_margin="10dp"
-        android:textSize="17dp"
-        android:textColor="@color/black"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="\n
-- Đặt lịch khám bệnh\n
-- Tư vấn\n
-- Bệnh án\n
-- Diễn đàn\n
- "/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Các chức năng của ứng dụng Hepat"
+        android:textColor="#f98"
+        android:textSize="19dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="❥
+Đặt lịch khám bệnh\n❥Tư vấn\n❥Bệnh án\n❥Diễn đàn\n
+ "
+        android:textColor="#17A0B3"
+        android:textSize="17dp" />
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/heath"/>
 </LinearLayout>
