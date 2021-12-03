@@ -4,102 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThongBao_Activity">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="#34D16D"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-40dp"
-        android:gravity="center_vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08"
-        tools:layout_editor_absoluteX="1dp">
-
-        <ImageButton
-            android:id="@+id/imbtnBack"
-            android:layout_width="80dp"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#34D16D"
-            android:src="@drawable/ic_back"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.056"
-            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-        <TextView
-            android:id="@+id/txtTital"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background=" #34D16D"
-            android:gravity="center"
-            android:text="Thông báo"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:layout_gravity="center"
-
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.049"
-            tools:layout_editor_absoluteX="1dp" />
-    </LinearLayout>
+    tools:context=".ThongBao_Activity"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/txtHomNay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="580dp"
-        android:text="Hôm nay"
+        android:id="@+id/txtTital"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="#37D16D"
+        android:text="Thông báo"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/btnXoa"
+    <ImageButton
+        android:id="@+id/imbtnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="580dp"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/ic_delete"
-        android:text="Xóa"
-        android:textAllCaps="false"
-        android:textColor="#FFD3D1D1"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:background="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_tim2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:id="@+id/linearLayout2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:background="#34D16D"-->
+<!--        app:layout_constraintBottom_toTopOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="-40dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.08"-->
+<!--        tools:layout_editor_absoluteX="1dp">-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/imbtnBack"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="#34D16D"-->
+<!--            android:src="@drawable/ic_back"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.056"-->
+<!--            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtTital"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background=" #34D16D"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:text="Thông báo"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="30sp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:paddingLeft="-80dp"-->
+
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.049"-->
+<!--            tools:layout_editor_absoluteX="1dp" />-->
+<!--    </LinearLayout>-->
+
+<!--        <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/txtHomNay">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ListView-->
+<!--                android:id="@+id/lvTB"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="400dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:listSelector="#34D16D"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/txtHomNay"/>-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="10dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtHomNay">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,18 +136,80 @@
                 android:layout_marginTop="20dp"
                 android:listSelector="#34D16D"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtHomNay"/>
+                app:layout_constraintTop_toBottomOf="@+id/txtHomNay" />
         </LinearLayout>
     </ScrollView>
 
     <RelativeLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+        <!--    <TextView-->
+        <!--        android:id="@+id/txtHomNay"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginLeft="20dp"-->
+        <!--        android:layout_marginBottom="510dp"-->
+        <!--        android:text="Hôm nay"-->
+        <!--        android:textColor="@color/black"-->
+        <!--        android:textSize="20dp"-->
+        <!--        android:textStyle="bold"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.048"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:gravity="center_vertical"
+            android:text="Hôm nay"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnXoa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="#FFFFFF"
+            android:drawableLeft="@drawable/ic_delete"
+            android:text="Xóa"
+            android:textColor="@color/black" />
+
+        <!--    <Button-->
+        <!--        android:id="@+id/btnXoa"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginRight="20dp"-->
+        <!--        android:layout_marginBottom="500dp"-->
+        <!--        android:backgroundTint="@color/white"-->
+        <!--        android:drawableLeft="@drawable/ic_delete"-->
+        <!--        android:text="Xóa"-->
+        <!--        android:textAllCaps="false"-->
+        <!--        android:textColor="#FFD3D1D1"-->
+        <!--        android:textSize="20dp"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.947"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"/>-->
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-
         android:background="@color/white">
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
@@ -131,6 +217,6 @@
             android:id="@+id/navigation"
             app:menu="@menu/menu_bottom_nav"
             app:itemIconTint="@drawable/selector"
-            app:itemTextColor="@drawable/selector" />
+            app:itemTextColor="@drawable/selector"/>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

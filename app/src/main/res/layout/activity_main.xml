@@ -45,7 +45,6 @@
                 android:minHeight="48dp"
                 android:textSize="20dp"
                 app:layout_constraintLeft_toRightOf="@id/imbtnHeart"
-
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
@@ -122,9 +121,10 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/recycler_banner"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
-                >
+                android:layout_marginRight="20dp">
+
                 <TableRow>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -135,6 +135,7 @@
                         android:layout_marginBottom="10dp"
                         android:layout_span="4"/>
                 </TableRow>
+
                 <TableRow>
 
                     <ImageButton
@@ -142,7 +143,6 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginLeft="20dp"
-
                         android:layout_marginRight="20dp"
                         android:src="@drawable/datlich"
                         tools:ignore="SpeakableTextPresentCheck" />
@@ -152,7 +152,6 @@
                         android:layout_width="95dp"
                         android:layout_height="80dp"
                         android:layout_marginRight="20dp"
-
                         android:src="@drawable/tuvan"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -161,7 +160,6 @@
                         android:layout_width="80dp"
                         android:layout_height="80dp"
                         android:layout_marginRight="20dp"
-
                         android:src="@drawable/benhan"
                         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -169,10 +167,11 @@
                         android:id="@+id/imbtnDienDan"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:src="@drawable/diendan"
+                        android:src="@drawable/datlich"
                         tools:ignore="SpeakableTextPresentCheck" />
 
                 </TableRow>
+
                 <TableRow>
                     <TextView
                         android:layout_width="wrap_content"
@@ -191,7 +190,6 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:text="Bệnh án"
                         android:textSize="16sp"
                         android:layout_marginRight="18dp"
@@ -201,9 +199,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Điễn đàn"
-                        android:textSize="16sp"
-
-                        />
+                        android:textSize="16sp"/>
                 </TableRow>
             </TableLayout>
             <TextView
@@ -253,13 +249,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
 
         android:background="@color/white">
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:id="@+id/navigation"
-            app:menu="@menu/menu_bottom_nav"
             app:itemIconTint="@drawable/selector"
-            app:itemTextColor="@drawable/selector" />
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/menu_bottom_nav" />
 <!--        <TableLayout-->
 <!--            android:id="@+id/tbMenu"-->
 <!--            android:layout_width="match_parent"-->
