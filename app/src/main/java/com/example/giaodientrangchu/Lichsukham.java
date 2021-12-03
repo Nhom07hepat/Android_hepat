@@ -20,8 +20,8 @@ import java.util.ArrayList;
 
 public class Lichsukham extends AppCompatActivity {
     RecyclerView reclichsukham;
-    ArrayList<LichKhamht> lichKhamhts;
-    LichKhamAdapter adapter;
+    ArrayList<LichKhamDaht> lichKhamDahts;
+    LichKhamdahtAdapter lichKhamdahtAdapter;
     ImageButton imbBack;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,13 +36,13 @@ public class Lichsukham extends AppCompatActivity {
             }
         });
 
-        DBBooking dbBooking = new DBBooking(this);
-        lichKhamhts = dbBooking.getAllLichKhamht();
-        adapter = new LichKhamAdapter(lichKhamhts,this);
-        reclichsukham.setAdapter(adapter);
-        LinearLayoutManager layout = new LinearLayoutManager(this);
-        layout.setOrientation(RecyclerView.VERTICAL);
-        reclichsukham.setLayoutManager(layout);
+        DB_LichHT db_lichHT = new DB_LichHT(this);
+        lichKhamDahts = db_lichHT.getAllLichKhamht();
+        lichKhamdahtAdapter = new LichKhamdahtAdapter(lichKhamDahts,this);
+        reclichsukham.setAdapter(lichKhamdahtAdapter);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
+        reclichsukham.setLayoutManager(linearLayoutManager);
 
 
     }
