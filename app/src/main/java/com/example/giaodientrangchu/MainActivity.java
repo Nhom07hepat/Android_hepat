@@ -2,6 +2,7 @@ package com.example.giaodientrangchu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -10,8 +11,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 import com.example.adapter.AdapterBanner;
 import com.example.adapter.RecyclerOnItemClick;
@@ -19,6 +23,13 @@ import com.example.banner.banner0;
 import com.example.banner.banner1;
 import com.example.banner.banner2;
 import com.example.banner.banner3;
+import com.example.fragment.BlankFragment;
+import com.example.fragment.tuvan_fragment;
+import com.example.fragment.tuvan_fragment1;
+import com.example.fragment.tuvan_fragment2;
+import com.example.fragment.tuvan_fragment3;
+import com.example.fragment.tuvan_fragment4;
+import com.example.fragment.tuvan_fragment5;
 import com.example.model.Banner;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -31,6 +42,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
     RecyclerView recycler_banner;
     List<Banner> bannerList;
     BottomNavigationView navigationView;
+    SearchView svSearch;
+    ListView lvTK;
+
+    String[] chucnangs = {"Đặt lịch", "Tư vấn", "Diễn đàn", "Bệnh án",
+             "Lịch khám","Thông báo","Tài khoản"};
+    ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +92,59 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
 
     }
     private void addEvents() {
+        svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_activated_1, chucnangs);
+                lvTK.setAdapter(adapter);
+                adapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+        lvTK.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String text = parent.getItemAtPosition(position).toString();
+                if (text.equals("Đặt lịch")) {
+                    Intent intent = new Intent(MainActivity.this, Booking_Activity.class);
+                    startActivity(intent);
+                    lvTK.setAdapter(null);
+                } else if (text.equals("Tư vấn")) {
+                    Intent intent = new Intent(MainActivity.this, activity_tu_van.class);
+                    startActivity(intent);
+                    lvTK.setAdapter(null);
+                } else if (text.equals("Diễn đàn")) {
+                    Intent intent = new Intent(MainActivity.this, DienDan.class);
+                    startActivity(intent);
+                    lvTK.setAdapter(null);
+                } else if (text.equals("Bệnh án")) {
+                    Intent intent = new Intent(MainActivity.this, HoSo_Activity.class);
+                    startActivity(intent);
+                    lvTK.setAdapter(null);
+                } else if (text.equals("Lịch khám")) {
+                    Intent intent = new Intent(MainActivity.this, LichKham.class);
+                    startActivity(intent);
+                    lvTK.setAdapter(null);
+                }else if (text.equals("Thông báo")) {
+                    Intent intent = new Intent(MainActivity.this, ThongBao_Activity.class);
+                    startActivity(intent);
+                    lvTK.setAdapter(null);
+                }
+                else if (text.equals("Tài khoản")){
+                    Intent intent = new Intent(MainActivity.this, TrangUser.class);
+                    startActivity(intent);
+                    lvTK.setAdapter(null);
+                }
+                else {
+                    lvTK.setAdapter(null);
+                }
+            }
+        });
         navigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
@@ -142,6 +212,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
 
 
     private void linkView() {
+        svSearch = findViewById(R.id.svSearch);
+        lvTK = findViewById(R.id.lvTK);
         imbtnDatlich=findViewById(R.id.imbtnDatLich);
         imbtnTuVan=findViewById(R.id.imbtnTuVan);
         imbtnBenhAn=findViewById(R.id.imbtnBenhAn);
