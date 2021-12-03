@@ -1,5 +1,6 @@
 package com.example.giaodientrangchu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -18,15 +20,17 @@ import com.example.banner.banner1;
 import com.example.banner.banner2;
 import com.example.banner.banner3;
 import com.example.model.Banner;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements RecyclerOnItemClick {
-    ImageButton imbtnDatlich,imbtnTuVan,imbtnBenhAn,imbtnDienDan,imbtnUser,imbtnHomePage,imbtnLichKham,imbtnThongBao,imbtnTaiKhoan,imbtnBack,imbtn;
+    ImageButton imbtnDatlich,imbtnTuVan,imbtnBenhAn,imbtnDienDan,imbtnUser;
     Button btnXemthem;
     RecyclerView recycler_banner;
     List<Banner> bannerList;
+    BottomNavigationView navigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
 
         AdapterBanner adapterBanner = new AdapterBanner(this,bannerList,this);
         recycler_banner.setAdapter(adapterBanner);
+
+        navigationView.setSelectedItemId(R.id.action_home);
 
     }
 
@@ -69,11 +75,30 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
 
     }
     private void addEvents() {
-        imbtnLichKham.setOnClickListener(new View.OnClickListener() {
+        navigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,LichKham.class);
-                startActivity(intent);
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.action_home:
+                        break;
+                    case R.id.action_lich:
+                        startActivity(new Intent(getApplicationContext(),LichKham.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.action_qr:
+                        break;
+                    case R.id.action_thongbao:
+                        startActivity(new Intent(getApplicationContext(),ThongBao_Activity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.action_taikhoan:
+                        startActivity(new Intent(getApplicationContext(),TrangUser.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                }
             }
         });
        imbtnDatlich.setOnClickListener(new View.OnClickListener() {
@@ -91,24 +116,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
                 startActivity(intent);
             }
         });
-        imbtnThongBao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,ThongBao_Activity.class);
-                startActivity(intent);
-            }
-        });
         imbtnBenhAn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this,HoSo_Activity.class);
-                startActivity(intent);
-            }
-        });
-        imbtnTaiKhoan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(MainActivity.this,TrangUser.class);
                 startActivity(intent);
             }
         });
@@ -136,12 +147,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
         imbtnBenhAn=findViewById(R.id.imbtnBenhAn);
         imbtnDienDan=findViewById(R.id.imbtnDienDan);
         imbtnUser=findViewById(R.id.imbtnUser);
-        imbtnHomePage=findViewById(R.id.imbtnHomePage);
-        imbtnLichKham=findViewById(R.id.imbtnLichKham);
-        imbtnThongBao=findViewById(R.id.imbtnThongBao);
-        imbtnTaiKhoan=findViewById(R.id.imbtnTaikhoan);
         btnXemthem=findViewById(R.id.btnXemthem);
         recycler_banner=findViewById(R.id.recycler_banner);
+        navigationView = findViewById(R.id.navigation);
 
     }
 

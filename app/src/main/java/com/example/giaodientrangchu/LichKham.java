@@ -1,11 +1,13 @@
 package com.example.giaodientrangchu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -20,6 +22,7 @@ import com.example.adapter.LichKhamdahtAdapter;
 import com.example.model.LichKhamDaHuy;
 import com.example.model.LichKhamDaht;
 import com.example.model.LichKhamht;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -31,8 +34,9 @@ public class LichKham extends AppCompatActivity {
     LichKhamDaHuyApdater lichKhamDaHuyApdater;
     LichKhamdahtAdapter lichKhamdahtAdapter;
     LichKhamAdapter adapter;
-    ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan, imbtnBack;
-//
+    ImageButton imbtnBack;
+    BottomNavigationView navigationView;
+    //
 //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +63,8 @@ public class LichKham extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         reclichkhamdaht.setLayoutManager(linearLayoutManager);
+
+        navigationView.setSelectedItemId(R.id.action_lich);
     }
 
     @Override
@@ -75,33 +81,37 @@ public class LichKham extends AppCompatActivity {
     }
 
     private void addEvents() {
-        imbtnTaiKhoan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LichKham.this, TrangUser.class);
-                startActivity(intent);
-            }
-        });
-        imbtnThongBao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LichKham.this, ThongBao_Activity.class);
-                startActivity(intent);
-            }
-        });
-
-        imbtnHomePage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(LichKham.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
         imbtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LichKham.this, MainActivity.class);
                 startActivity(intent);
+            }
+        });
+        navigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+            @Override
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.action_home:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.action_lich:
+                        break;
+                    case R.id.action_qr:
+                        break;
+                    case R.id.action_thongbao:
+                        startActivity(new Intent(getApplicationContext(),ThongBao_Activity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.action_taikhoan:
+                        startActivity(new Intent(getApplicationContext(),TrangUser.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                }
             }
         });
     }
@@ -124,7 +134,7 @@ public class LichKham extends AppCompatActivity {
         tab.addTab(spec);
         tab.setCurrentTab(0);
     }
-//
+    //
 //    private void loadData() {
 //        adapter=new LichKhamAdapter(this,R.layout.list_view_lich_kham_hien_tai,lichKhamhts);
 //        lvLichkhamht.setAdapter(adapter);
@@ -164,10 +174,7 @@ public class LichKham extends AppCompatActivity {
         reclichkhamht = findViewById(R.id.reclichkhamht);
         reclichkhamhuy = findViewById(R.id.reclichkhamdahuy);
         reclichkhamdaht = findViewById(R.id.reclichkhamdaht);
-        imbtnHomePage = findViewById(R.id.imbtnHomePage);
-        imbtnLichKham = findViewById(R.id.imbtnLichKham);
-        imbtnThongBao = findViewById(R.id.imbtnThongBao);
-        imbtnTaiKhoan = findViewById(R.id.imbtnTaikhoan);
         imbtnBack = findViewById(R.id.imbtnBack);
+        navigationView = findViewById(R.id.navigation);
     }
 }

@@ -74,19 +74,25 @@ public class activity_tu_van extends AppCompatActivity {
                 Fragment fragment;
                 if (text.equals("Buồn nôn")) {
                     fragment = new tuvan_fragment();
+                    lvTC.setAdapter(null);
                 } else if (text.equals("Bị đau cơ khi căng người")) {
                     fragment = new tuvan_fragment1();
-
+                    lvTC.setAdapter(null);
                 } else if (text.equals("Bị choáng khi đứng lên đột ngột")) {
                     fragment = new tuvan_fragment2();
+                    lvTC.setAdapter(null);
                 } else if (text.equals("Đau thắt ngực trái")) {
                     fragment = new tuvan_fragment3();
+                    lvTC.setAdapter(null);
                 } else if (text.equals("Đau vùng thuợng vị")) {
                     fragment = new tuvan_fragment4();
+                    lvTC.setAdapter(null);
                 } else if (text.equals("Choáng váng")) {
                     fragment = new tuvan_fragment5();
+                    lvTC.setAdapter(null);
                 } else {
                     fragment = new BlankFragment();
+                    lvTC.setAdapter(null);
                 }
                 FragmentManager manager = getSupportFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();

@@ -1,5 +1,6 @@
 package com.example.giaodientrangchu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -7,6 +8,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -14,10 +16,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 public class TrangUser extends AppCompatActivity {
-    ImageButton imbtnHomePage, imbtnLichKham, imbtnThongBao, imbtnTaiKhoan;
-    Button btnDangXuat,btnCapNhat,btnGioiThieu,btnHotline;
+    Button btnDangXuat,btnCapNhat,btnGioiThieu,btnHotline, btnlichsuKham;
     Dialog dialog_hotline,dialog;
+    BottomNavigationView navigationView;
 
 
 
@@ -25,18 +29,50 @@ public class TrangUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trang_user);
-        imbtnHomePage = findViewById(R.id.imbtnHomePage);
-        imbtnLichKham = findViewById(R.id.imbtnLichKham);
-        imbtnThongBao = findViewById(R.id.imbtnThongBao);
-        imbtnTaiKhoan = findViewById(R.id.imbtnTaikhoan);
         btnGioiThieu=findViewById(R.id.btnGioithieu);
         btnDangXuat = findViewById(R.id.btnDangxuat);
         btnCapNhat = findViewById(R.id.btnThongtincanhan);
         btnHotline = findViewById(R.id.btnHotline);
+        btnlichsuKham = findViewById(R.id.btnLichsudatkham);
+        navigationView = findViewById(R.id.navigation);
+        navigationView.setSelectedItemId(R.id.action_taikhoan);
+        navigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+            @Override
+            public void onNavigationItemReselected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.action_home:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.action_lich:
+                        startActivity(new Intent(getApplicationContext(),LichKham.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.action_qr:
+                        break;
+                    case R.id.action_thongbao:
+                        startActivity(new Intent(getApplicationContext(),ThongBao_Activity.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.action_taikhoan:
+                        break;
+                }
+            }
+        });
         btnCapNhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(TrangUser.this,capnhatthongtin.class);
+                startActivity(intent);
+            }
+        });
+        btnlichsuKham.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(TrangUser.this, Lichsukham.class);
                 startActivity(intent);
             }
         });
@@ -101,20 +137,6 @@ public class TrangUser extends AppCompatActivity {
             }
         });
 
-        imbtnLichKham.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrangUser.this, LichKham.class);
-                startActivity(intent);
-            }
-        });
-        imbtnThongBao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrangUser.this, ThongBao_Activity.class);
-                startActivity(intent);
-            }
-        });
         btnGioiThieu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,13 +145,6 @@ public class TrangUser extends AppCompatActivity {
             }
         });
 
-        imbtnHomePage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrangUser.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
         btnHuyDangXuat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

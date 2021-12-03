@@ -107,108 +107,125 @@
             </FrameLayout>
         </LinearLayout>
     </TabHost>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="0dp"
+
         android:background="@color/white">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/navigation"
+        app:menu="@menu/menu_bottom_nav"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector" />
+    </RelativeLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="110dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:background="@color/white">-->
 
-        <TableLayout
-            android:id="@+id/tbMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:shrinkColumns="*"
-            android:stretchColumns="*"
-            android:background="@color/white">
+<!--        <TableLayout-->
+<!--            android:id="@+id/tbMenu"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:shrinkColumns="*"-->
+<!--            android:stretchColumns="*"-->
+<!--            android:background="@color/white">-->
 
-            <TableRow>
+<!--            <TableRow>-->
 
-                <ImageButton
-                    android:id="@+id/imbtnHomePage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:backgroundTint="#B5F4B7"
-                    android:src="@drawable/home"
-                    tools:ignore="SpeakableTextPresentCheck" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imbtnHomePage"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:backgroundTint="#B5F4B7"-->
+<!--                    android:src="@drawable/home"-->
+<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
 
-                <ImageButton
-                    android:id="@+id/imbtnLichKham"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:minWidth="48dp"
-                    android:minHeight="48dp"
-                    android:src="@drawable/lichkham_3"
-                    tools:ignore="SpeakableTextPresentCheck" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imbtnLichKham"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:minWidth="48dp"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:src="@drawable/lichkham_3"-->
+<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
 
-                <ImageButton
-                    android:id="@+id/imbtnMaQR"
-                    android:layout_width="60dp"
-                    android:layout_height="80dp"
-                    android:background="#37D16D"
-                    android:src="@drawable/qrcode_1"
-                    tools:ignore="SpeakableTextPresentCheck" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imbtnMaQR"-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="80dp"-->
+<!--                    android:background="#37D16D"-->
+<!--                    android:src="@drawable/qrcode_1"-->
+<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
 
-                <ImageButton
-                    android:id="@+id/imbtnThongBao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:minWidth="48dp"
-                    android:minHeight="48dp"
-                    android:src="@drawable/thongbao_4"
-                    tools:ignore="SpeakableTextPresentCheck" />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imbtnThongBao"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:minWidth="48dp"-->
+<!--                    android:minHeight="48dp"-->
+<!--                    android:src="@drawable/thongbao_4"-->
+<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
 
-                <ImageButton
-                    android:id="@+id/imbtnTaikhoan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@color/white"
-                    android:src="@drawable/ic_baseline_perm_identity_24"
-                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/trang_chu"
-                    android:layout_gravity="center"
-                    android:textSize="13dp"
-                    android:layout_marginBottom="5dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/lich_kham"
-                    android:layout_gravity="center"
-                    android:textSize="13dp"
-                    android:layout_marginBottom="5dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/thong_bao"
-                    android:layout_gravity="center"
-                    android:textSize="13dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_column="3"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tai_khoan"
-                    android:layout_gravity="center"
-                    android:textSize="13dp"
-                    android:layout_marginBottom="5dp"
-                    />
+<!--                <ImageButton-->
+<!--                    android:id="@+id/imbtnTaikhoan"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:background="@color/white"-->
+<!--                    android:src="@drawable/ic_baseline_perm_identity_24"-->
+<!--                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />-->
+<!--            </TableRow>-->
+<!--            <TableRow>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/trang_chu"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textSize="13dp"-->
+<!--                    android:layout_marginBottom="5dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/lich_kham"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textSize="13dp"-->
+<!--                    android:layout_marginBottom="5dp"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/thong_bao"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textSize="13dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:layout_column="3"/>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/tai_khoan"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textSize="13dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    />-->
 
-            </TableRow>
-        </TableLayout>
-    </LinearLayout>
+<!--            </TableRow>-->
+<!--        </TableLayout>-->
+<!--    </LinearLayout>-->
 </androidx.constraintlayout.widget.ConstraintLayout>
