@@ -11,8 +11,6 @@
         android:title="@string/action_lich" />
     <item
         android:id="@+id/action_qr"
-        android:iconTintMode="src_in"
-
         android:icon="@drawable/qrcode"
         android:title="" />
     <item
