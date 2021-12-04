@@ -43,16 +43,18 @@ public class capnhatthongtin extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, GioiTinh);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerGT.setAdapter(adapter);
+
         sharedPreferences = getSharedPreferences(SHARE_PREFERENCES,MODE_PRIVATE);
         String hoten = sharedPreferences.getString(Hoten, null);
         String ngaysinh = sharedPreferences.getString(NgaySinh,null);
         String gioitinh = sharedPreferences.getString(GT,null);
         String sdt = sharedPreferences.getString(SDT,null);
         String diachi = sharedPreferences.getString(DiaChi,null);
-        if(hoten != null && ngaysinh!= null && gioitinh != null && sdt != null && diachi !=null){
+        if(hoten != null && ngaysinh!= null && sdt != null && diachi !=null){
             Intent intent = new Intent(capnhatthongtin.this,thongtincanhan.class);
             startActivity(intent);
         }
+
         btnCapNhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

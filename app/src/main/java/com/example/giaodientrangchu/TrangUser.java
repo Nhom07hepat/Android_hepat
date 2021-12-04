@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -22,8 +23,12 @@ public class TrangUser extends AppCompatActivity {
     Button btnDangXuat,btnCapNhat,btnGioiThieu,btnHotline, btnlichsuKham;
     Dialog dialog_hotline,dialog;
     BottomNavigationView navigationView;
+    TextView txtHovaTen, txtSoDienThoai;
 
-
+    SharedPreferences sharedPreferences;
+    public static final String SHARE_PREFERENCES = "share_preferences";
+    public  static final String Hoten ="Họ tên";
+    public static final String SDT = "Số điện thoại";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,8 @@ public class TrangUser extends AppCompatActivity {
         btnlichsuKham = findViewById(R.id.btnLichsudatkham);
         navigationView = findViewById(R.id.navigation);
         navigationView.setSelectedItemId(R.id.action_taikhoan);
+        txtHovaTen = findViewById(R.id.txtHovaTen);
+        txtSoDienThoai = findViewById(R.id.txtSoDienThoai);
         navigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
@@ -62,6 +69,14 @@ public class TrangUser extends AppCompatActivity {
                 }
             }
         });
+        sharedPreferences = getSharedPreferences(SHARE_PREFERENCES,MODE_PRIVATE);
+        String hoten = sharedPreferences.getString(Hoten, null);
+        String sdt = sharedPreferences.getString(SDT,null);
+        if(hoten != null || sdt != null){
+            txtHovaTen.setText(hoten);
+            txtSoDienThoai.setText(sdt);
+
+        }
         btnCapNhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

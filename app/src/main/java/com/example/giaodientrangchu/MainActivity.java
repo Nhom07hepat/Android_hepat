@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.adapter.AdapterBanner;
 import com.example.adapter.RecyclerOnItemClick;
@@ -48,6 +50,11 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
     String[] chucnangs = {"Đặt lịch", "Tư vấn", "Diễn đàn", "Bệnh án",
              "Lịch khám","Thông báo","Tài khoản"};
     ArrayAdapter<String> adapter;
+
+    TextView txtNameUser;
+    SharedPreferences sharedPreferences;
+    public static final String SHARE_PREFERENCES = "share_preferences";
+    public  static final String Hoten ="Họ tên";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
         svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                lvTK.setAdapter(null);
                 return false;
             }
 
@@ -145,6 +153,13 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
                 }
             }
         });
+
+        sharedPreferences = getSharedPreferences(SHARE_PREFERENCES,MODE_PRIVATE);
+        String hoten = sharedPreferences.getString(Hoten, null);
+        if(hoten != null ){
+            txtNameUser.setText(hoten);
+
+        }
         navigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
             @Override
             public void onNavigationItemReselected(@NonNull MenuItem item) {
@@ -212,6 +227,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
 
 
     private void linkView() {
+        txtNameUser = findViewById(R.id.txtNameUser);
         svSearch = findViewById(R.id.svSearch);
         lvTK = findViewById(R.id.lvTK);
         imbtnDatlich=findViewById(R.id.imbtnDatLich);

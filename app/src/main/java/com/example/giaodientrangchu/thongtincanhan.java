@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class thongtincanhan extends AppCompatActivity {
     TextView txtHoTen, txtNgaySinh, txtSDT, txtDiaChi, txtGT;
-    Button btnCSTT;
+    Button btnCSTT, btnOK;
     ImageButton imbBack;
     SharedPreferences sharedPreferences;
     public static final String SHARE_PREFERENCES = "share_preferences";
@@ -36,6 +36,7 @@ public class thongtincanhan extends AppCompatActivity {
         txtSDT = findViewById(R.id.txtSDT);
         txtDiaChi = findViewById(R.id.txtDiaChi);
         btnCSTT = findViewById(R.id.btnCSTT);
+        btnOK = findViewById(R.id.btnOK);
         imbBack = findViewById(R.id.imbtnBack);
 
         sharedPreferences = getSharedPreferences(SHARE_PREFERENCES,MODE_PRIVATE);
@@ -54,7 +55,7 @@ public class thongtincanhan extends AppCompatActivity {
 
 //        nhanDL();
 
-        btnCSTT.setOnClickListener(new View.OnClickListener() {
+        btnOK.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent =new Intent(thongtincanhan.this,TrangUser.class);
@@ -62,11 +63,25 @@ public class thongtincanhan extends AppCompatActivity {
 
             }
         });
+        btnCSTT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.remove(Hoten);
+                editor.remove(NgaySinh);
+                editor.remove(GT);
+                editor.remove(SDT);
+                editor.remove(DiaChi);
+                editor.commit();
+                Intent intent = new Intent(thongtincanhan.this, capnhatthongtin.class);
+                startActivity(intent);
+            }
+        });
 
         imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(thongtincanhan.this,capnhatthongtin.class);
+                Intent intent = new Intent(thongtincanhan.this,TrangUser.class);
                 startActivity(intent);
             }
         });
