@@ -1,37 +1,55 @@
 package com.example.model;
 
+import java.util.Date;
+
 public class Postdiendan {
-    private String userName;
-    private String userTime;
-    private String userQuestion;
+    int id;
+    String name;
+    String time;
+    String content;
 
-    public Postdiendan(String userName, String userTime, String userQuestion) {
-        this.userName = userName;
-        this.userTime = userTime;
-        this.userQuestion = userQuestion;
+    public Postdiendan(int id, String name, String time, String content) {
+        this.id = id;
+        this.name = name;
+        this.time = time;
+        this.content = content;
     }
 
-    public String getUserName() {
-        return userName;
+    public Postdiendan(String name, String time, String content) {
+        this.name = name;
+        this.time = time;
+        this.content = content;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public int getId() {
+        return id;
     }
 
-    public String getUserTime() {
-        return userTime;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void setUserTime(String userTime) {
-        this.userTime = userTime;
+    public String getName() {
+        return name;
     }
 
-    public String getUserQuestion() {
-        return userQuestion;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setUserQuestion(String userQuestion) {
-        this.userQuestion = userQuestion;
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 }

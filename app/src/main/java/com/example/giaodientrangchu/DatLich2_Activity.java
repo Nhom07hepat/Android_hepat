@@ -23,9 +23,10 @@ public class DatLich2_Activity extends AppCompatActivity {
     private TextView txtNgayDat, txtGioDat;
     private Button btnLich, btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
     Dialog dialog;
-public static final String Bv = "Bệnh viện ";
-public static final String Ngaydat = "Ngày đặt";
-public static final String Giodat = "Giờ đặt";
+
+    public static final String Bv = "Bệnh viện ";
+    public static final String Ngaydat = "Ngày đặt";
+    public static final String Giodat = "Giờ đặt";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

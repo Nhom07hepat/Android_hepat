@@ -17,7 +17,7 @@
         android:id="@+id/txtUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nguyễn Văn An"
+        android:text=""
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,6 +38,7 @@
         android:background="#E4E3E3"
         android:layout_marginTop="30dp"/>
     <Button
+        android:id="@+id/btnDangBai"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Đăng"

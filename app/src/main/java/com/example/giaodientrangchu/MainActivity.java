@@ -102,7 +102,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
         svSearch.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                lvTK.setAdapter(null);
                 return false;
             }
 
