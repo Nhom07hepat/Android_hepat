@@ -7,9 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="#34D16D"
-    android:orientation="vertical"
+    android:orientation="vertical">
 
-    >
     <ScrollView
         android:id="@+id/scrollviewTrangchi"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,6 +16,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="match_parent"
         android:layout_height="630dp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -32,6 +32,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck" />
+
             <androidx.appcompat.widget.SearchView
                 android:id="@+id/svSearch"
                 android:layout_width="250dp"
@@ -44,6 +45,7 @@
                 app:iconifiedByDefault="false"
                 app:layout_constraintLeft_toRightOf="@id/imbtnHeart"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <ListView
                 android:id="@+id/lvTK"
                 android:layout_width="250dp"
@@ -65,6 +67,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="SpeakableTextPresentCheck" />
+
             <TextView
                 android:id="@+id/txtChao"
                 android:layout_width="wrap_content"
@@ -75,6 +78,7 @@
                 app:layout_constraintTop_toBottomOf="@id/imbtnHeart"
                 android:layout_marginTop="25dp"
                 android:layout_marginLeft="50dp"/>
+
             <TextView
                 android:id="@+id/txtNameUser"
                 android:layout_width="wrap_content"
@@ -85,7 +89,8 @@
                 app:layout_constraintTop_toBottomOf="@id/txtChao"
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="50dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <ImageView
                 android:id="@+id/imvDoctor"
                 android:src="@drawable/icon_doctor"
@@ -94,8 +99,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/svSearch"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                />
+                android:layout_marginTop="5dp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -103,9 +107,7 @@
                 android:background="@drawable/nen_5"
                 app:layout_constraintTop_toBottomOf="@id/imvDoctor"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-
-                />
+                app:layout_constraintLeft_toLeftOf="parent" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_banner"
@@ -121,98 +123,122 @@
                 android:id="@+id/tbDichvuHepat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:shrinkColumns="*"
                 android:stretchColumns="*"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/recycler_banner"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp">
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recycler_banner">
 
-                <TableRow>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Dich vụ Hepat"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-                    <TextView
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Dich vụ Hepat"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_span="4"/>
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/imbtnDatLich"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+
+                            android:scaleType="centerInside"
+                            android:src="@drawable/datlich"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Đặt lịch"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/imbtnTuVan"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/tuvan"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:text="Tư vấn"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/imbtnBenhAn"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/benhan"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bệnh án"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/imbtnDienDan"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/diendan"
+                            tools:ignore="SpeakableTextPresentCheck" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Điễn đàn"
+                            android:textSize="16sp" />
+                    </LinearLayout>
                 </TableRow>
 
-                <TableRow>
-
-                    <ImageButton
-                        android:id="@+id/imbtnDatLich"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
-                        android:src="@drawable/datlich"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <ImageButton
-                        android:id="@+id/imbtnTuVan"
-                        android:layout_width="95dp"
-                        android:layout_height="80dp"
-                        android:layout_marginRight="20dp"
-                        android:src="@drawable/tuvan"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <ImageButton
-                        android:id="@+id/imbtnBenhAn"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:layout_marginRight="20dp"
-                        android:src="@drawable/benhan"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                    <ImageButton
-                        android:id="@+id/imbtnDienDan"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:src="@drawable/datlich"
-                        tools:ignore="SpeakableTextPresentCheck" />
-
-                </TableRow>
-
-                <TableRow>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Đặt lịch"
-                        android:textSize="16sp"
-                        android:layout_gravity="center"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tư vấn"
-                        android:textSize="16sp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Bệnh án"
-                        android:textSize="16sp"
-                        android:layout_marginRight="18dp"
-                        android:layout_marginLeft="5dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Điễn đàn"
-                        android:textSize="16sp"/>
-                </TableRow>
             </TableLayout>
             <TextView
                 android:id="@+id/txtVeHepat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Về Hepeat"
+                android:text="Về Hepat"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@id/tbDichvuHepat"
@@ -249,11 +275,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-
         android:background="@color/white">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -263,99 +287,98 @@
             app:itemIconTint="@drawable/selector"
             app:itemTextColor="@drawable/selector"
             app:menu="@menu/menu_bottom_nav" />
-<!--        <TableLayout-->
-<!--            android:id="@+id/tbMenu"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:shrinkColumns="*"-->
-<!--            android:stretchColumns="*"-->
-<!--            android:background="@color/white">-->
-<!--            <TableRow>-->
+        <!--        <TableLayout-->
+        <!--            android:id="@+id/tbMenu"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:shrinkColumns="*"-->
+        <!--            android:stretchColumns="*"-->
+        <!--            android:background="@color/white">-->
+        <!--            <TableRow>-->
 
-<!--                <ImageButton-->
-<!--                    android:id="@+id/imbtnHomePage"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:background="@color/white"-->
-<!--                    android:backgroundTint="#B5F4B7"-->
-<!--                    android:src="@drawable/home"-->
-<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnHomePage"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:backgroundTint="#B5F4B7"-->
+        <!--                    android:src="@drawable/home"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck" />-->
 
-<!--                <ImageButton-->
-<!--                    android:id="@+id/imbtnLichKham"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:background="@color/white"-->
-<!--                    android:minWidth="48dp"-->
-<!--                    android:minHeight="48dp"-->
-<!--                    android:src="@drawable/lichkham_3"-->
-<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnLichKham"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:minWidth="48dp"-->
+        <!--                    android:minHeight="48dp"-->
+        <!--                    android:src="@drawable/lichkham_3"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck" />-->
 
-<!--                <ImageButton-->
-<!--                    android:id="@+id/imbtnMaQR"-->
-<!--                    android:layout_width="60dp"-->
-<!--                    android:layout_height="80dp"-->
-<!--                    android:background="#37D16D"-->
-<!--                    android:src="@drawable/qrcode_1"-->
-<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnMaQR"-->
+        <!--                    android:layout_width="60dp"-->
+        <!--                    android:layout_height="80dp"-->
+        <!--                    android:background="#37D16D"-->
+        <!--                    android:src="@drawable/qrcode_1"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck" />-->
 
-<!--                <ImageButton-->
-<!--                    android:id="@+id/imbtnThongBao"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:background="@color/white"-->
-<!--                    android:minWidth="48dp"-->
-<!--                    android:minHeight="48dp"-->
-<!--                    android:src="@drawable/thongbao_4"-->
-<!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnThongBao"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:minWidth="48dp"-->
+        <!--                    android:minHeight="48dp"-->
+        <!--                    android:src="@drawable/thongbao_4"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck" />-->
 
-<!--                <ImageButton-->
-<!--                    android:id="@+id/imbtnTaikhoan"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:background="@color/white"-->
-<!--                    android:src="@drawable/ic_baseline_perm_identity_24"-->
-<!--                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />-->
-<!--            </TableRow>-->
-<!--            <TableRow>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="@string/trang_chu"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:textSize="13dp"-->
-<!--                    android:layout_marginBottom="5dp"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="@string/lich_kham"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:textSize="13dp"-->
-<!--                    android:layout_marginBottom="5dp"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="@string/thong_bao"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:textSize="13dp"-->
-<!--                    android:layout_marginBottom="5dp"-->
-<!--                    android:layout_column="3"/>-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="@string/tai_khoan"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:textSize="13dp"-->
-<!--                    android:layout_marginBottom="5dp"-->
-<!--                    />-->
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnTaikhoan"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:src="@drawable/ic_baseline_perm_identity_24"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />-->
+        <!--            </TableRow>-->
+        <!--            <TableRow>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/trang_chu"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:layout_marginBottom="5dp"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/lich_kham"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:layout_marginBottom="5dp"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/thong_bao"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:layout_marginBottom="5dp"-->
+        <!--                    android:layout_column="3"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/tai_khoan"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:layout_marginBottom="5dp"-->
+        <!--                    />-->
 
-<!--            </TableRow>-->
-<!--        </TableLayout>-->
+        <!--            </TableRow>-->
+        <!--        </TableLayout>-->
     </RelativeLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
