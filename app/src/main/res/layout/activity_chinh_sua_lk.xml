@@ -98,67 +98,65 @@
             <!--                    tools:layout_editor_absoluteX="1dp" />-->
             <!--            </LinearLayout>-->
 
-
-            <ImageView
-                android:id="@+id/imvThongTin"
-                android:layout_width="370dp"
-                android:layout_height="180dp"
-                android:layout_marginTop="108dp"
-                android:adjustViewBounds="true"
-                android:scaleType="fitStart"
-                android:src="@drawable/duongvien_goctron"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <LinearLayout
-                android:id="@+id/linearLayout7"
-                android:layout_width="350dp"
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="32dp"
-                android:layout_marginBottom="4dp"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTital"
+                android:layout_marginTop="20dp"
+                tools:ignore="MissingConstraints">
 
-                <TextView
-                    android:id="@+id/txtNameBV"
-                    android:layout_width="wrap_content"
+                <ImageView
+                    android:id="@+id/imvThongTin"
+                    android:layout_width="370dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/duongvien_goctron" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="Bệnh viện Đại học Y dược"
-                    android:textColor="@color/white"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent" />
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/txtAddressBV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="201 Nguyễn Chí Thanh, P.12, Q.5"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent" />
+                    <TextView
+                        android:id="@+id/txtNameBV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:text="Bệnh viện Đại học Y dược"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="192dp"
-                    android:layout_marginBottom="900dp"
-                    android:justificationMode="inter_word"
-                    android:text="028 3855 4269"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toRightOf="parent" />
+                    <TextView
+                        android:id="@+id/txtAddressBV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center"
+                        android:textAlignment="center"
+                        android:text="201 Nguyễn Chí Thanh, P.12, Q.5"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:justificationMode="inter_word"
+                        android:text="028 3855 4269"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </FrameLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout8"
@@ -167,7 +165,7 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@+id/imvThongTin"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout"
                 tools:ignore="MissingConstraints">
 
                 <LinearLayout
@@ -192,7 +190,7 @@
                         android:id="@+id/txtNgayDat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
+                        android:layout_marginStart="60dp"
                         android:justificationMode="inter_word"
                         android:text=""
                         android:textColor="@color/black"
@@ -236,11 +234,12 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayout9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
                 tools:ignore="MissingConstraints">
 
@@ -266,26 +265,24 @@
                         android:id="@+id/txtGioDat"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="50dp"
+                        android:layout_marginStart="60dp"
                         android:justificationMode="inter_word"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="28sp"
-                        android:textStyle="bold" />
+                        android:textSize="28sp" />
                 </LinearLayout>
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:foregroundGravity="center_vertical"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:foregroundGravity="center_vertical">
 
                     <ImageView
                         android:layout_width="370dp"
                         android:layout_height="320dp"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitStart"
                         android:src="@drawable/khunggio" />
 
                     <TableLayout
@@ -306,26 +303,54 @@
                                 android:textSize="20sp" />
 
                             <Button
-                                android:id="@+id/btn2"
+                                android:id="@+id/btn3"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="20dp"
                                 android:backgroundTint="@color/white"
                                 android:gravity="center"
-                                android:text="9h - 10h"
+                                android:text="13h - 14H"
                                 android:textColor="#34D16D"
                                 android:textSize="20sp" />
+
+
                         </TableRow>
 
                         <TableRow android:layout_marginTop="20dp">
 
                             <Button
-                                android:id="@+id/btn3"
+                                android:id="@+id/btn5"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/white"
                                 android:gravity="center"
-                                android:text="13h - 14H"
+                                android:text="8h - 9h"
+                                android:textColor="#34D16D"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/btn7"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:text="14h - 15h"
+                                android:textColor="#34D16D"
+                                android:textSize="20sp" />
+
+
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="20dp">
+
+                            <Button
+                                android:id="@+id/btn2"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/white"
+                                android:gravity="center"
+                                android:text="9h - 10h"
                                 android:textColor="#34D16D"
                                 android:textSize="20sp" />
 
@@ -344,36 +369,12 @@
                         <TableRow android:layout_marginTop="20dp">
 
                             <Button
-                                android:id="@+id/btn5"
-                                android:layout_width="150dp"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
-                                android:gravity="center"
-                                android:text="8h - 9h"
-                                android:textColor="#34D16D"
-                                android:textSize="20sp" />
-
-                            <Button
                                 android:id="@+id/btn6"
                                 android:layout_width="150dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="20dp"
                                 android:backgroundTint="@color/white"
                                 android:gravity="center"
                                 android:text="10h - 11h"
-                                android:textColor="#34D16D"
-                                android:textSize="20sp" />
-                        </TableRow>
-
-                        <TableRow android:layout_marginTop="20dp">
-
-                            <Button
-                                android:id="@+id/btn7"
-                                android:layout_width="150dp"
-                                android:layout_height="wrap_content"
-                                android:backgroundTint="@color/white"
-                                android:gravity="center"
-                                android:text="9h - 10h"
                                 android:textColor="#34D16D"
                                 android:textSize="20sp" />
 
@@ -391,24 +392,25 @@
                     </TableLayout>
                 </FrameLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
                 tools:ignore="MissingConstraints">
+
                 <Button
                     android:id="@+id/btnChinhSuaLK"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="1100dp"
                     android:backgroundTint="#34D16D"
                     android:gravity="center_vertical"
                     android:text="Chỉnh Sửa"
                     android:textColor="@color/white"
-                    android:textSize="24sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:textSize="24sp" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
