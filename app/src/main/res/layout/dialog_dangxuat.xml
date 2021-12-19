@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="20dp">
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
         android:layout_width="match_parent"
@@ -12,6 +13,7 @@
         android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,15 +21,20 @@
         android:textSize="24sp"
         android:textColor="@color/black"
         android:gravity="center"
-        android:layout_marginTop="60dp"/>
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="40dp">
 
     <Button
         android:id="@+id/btnOK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="150dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="#F44336"
         android:text="Đồng ý"
         android:textColor="@color/black"
         android:textSize="20sp" />
@@ -36,11 +43,11 @@
         android:id="@+id/btnHuyDangXuat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="150dp"
         android:backgroundTint="@color/white"
         android:text="Hủy"
         android:textColor="@color/black"
+        android:layout_marginStart="20dp"
         android:textSize="20sp" />
+    </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

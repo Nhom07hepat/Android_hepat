@@ -11,11 +11,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="#34D16D">
+
             <TextView
                 android:id="@+id/txtKQ"
                 android:layout_width="match_parent"
@@ -33,10 +35,10 @@
         android:layout_centerVertical="true"
         android:background="@drawable/khunggio"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/txtName1"
@@ -63,10 +65,10 @@
         android:layout_centerVertical="true"
         android:background="@drawable/khunggio"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/txtName2"
@@ -84,8 +86,8 @@
             android:text="Đau thượng vị thường bị nhầm lẫn với đau dạ dày. Chúng tiềm ẩn nhiều nguy cơ dẫn đến ung thư nhiều hơn nếu không được điều trị kịp thời."
             android:textColor="@color/black"
             android:textSize="18sp" />
-
     </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -100,11 +102,7 @@
                 android:id="@+id/recBV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                />
+                android:layout_margin="10dp" />
         </LinearLayout>
-
     </ScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

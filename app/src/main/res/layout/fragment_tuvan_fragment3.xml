@@ -5,17 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.fragment.tuvan_fragment"
     android:background="#34D16D">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="#34D16D">
+
             <TextView
                 android:id="@+id/txtKQ"
                 android:layout_width="match_parent"
@@ -29,14 +32,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:background="@drawable/khunggio"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/txtName1"
@@ -54,19 +57,18 @@
             android:text="Nguyên nhân đau tức ngực trái phổ biến và rõ rệt nhất thường là do bệnh tim mạch gây ra. Cụ thể là một số bệnh lý như viêm màng ngoài tim, "
             android:textColor="@color/black"
             android:textSize="18sp" />
-
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_centerVertical="true"
         android:background="@drawable/khunggio"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/txtName2"

@@ -11,6 +11,7 @@
     android:layout_height="90dp"
     android:background="#37D16D"
     android:text="VỀ HEPAT"
+    android:textColor="@color/black"
     android:textSize="30sp"
     android:textStyle="bold"
     android:gravity="center"
@@ -51,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hepat"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="26sp"/>
             <TextView
@@ -62,6 +64,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/giaiphap"
                 android:textStyle="bold"
                 android:textSize="26sp"/>
@@ -93,6 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/doituong"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="26sp"/>
             <TextView
@@ -116,6 +120,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chuchnang"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="26sp"/>
 
@@ -148,6 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chitiet"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="26sp"/>
             <TextView
@@ -166,9 +172,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chitiet_y3"
-
                 android:textSize="24sp"/>
-
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

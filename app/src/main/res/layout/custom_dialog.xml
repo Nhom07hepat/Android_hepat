@@ -1,59 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#ECF0FC"
-    android:layout_marginLeft="20dp"
-    android:layout_marginRight="20dp">
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="150dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginBottom="212dp"
-        android:src="@drawable/check"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_gravity="center"
+        android:src="@drawable/check" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="160dp"
-        android:text="Xác nhận đặt lich khám bệnh"
+        android:layout_gravity="center"
+        android:text="Xác nhận đặt lịch khám bệnh?"
         android:textColor="#34D16D"
-        android:textSize="30sp"
+        android:textSize="26sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
 
     <Button
         android:id="@+id/btnXacNhan"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="56dp"
         android:backgroundTint="#34D16D"
-        android:text="Xác nhận"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="18dp"
+        android:text="Xác nhận" />
 
     <Button
         android:id="@+id/btnHuy"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="208dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginStart="20dp"
         android:backgroundTint="#34D16D"
         android:text="Hủy"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textSize="18sp" />
+    </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

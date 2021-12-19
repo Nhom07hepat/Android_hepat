@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".TrangUser"
     android:background="#34D16D">
+
     <ImageView
         android:id="@+id/imvUser"
         android:src="@drawable/ic_baseline_account_circle_24"
@@ -13,9 +14,9 @@
         android:layout_height="100dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="25dp"
-        />
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp" />
+
     <TextView
         android:id="@+id/txtHovaTen"
         android:layout_width="wrap_content"
@@ -28,6 +29,7 @@
         android:layout_marginLeft="10dp"
         android:textColor="@color/white"
         android:textStyle="bold"/>
+
     <TextView
         android:id="@+id/txtSoDienThoai"
         android:layout_width="wrap_content"
@@ -40,6 +42,7 @@
         android:layout_marginLeft="10dp"
         android:textColor="@color/white"
         android:textStyle="bold"/>
+
     <ImageView
         android:id="@+id/imvDoctor"
         android:src="@drawable/icon_doctor"
@@ -69,11 +72,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imvDoctor"
         android:layout_marginTop="35dp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-          >
-
+            android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btnThongtincanhan"
@@ -88,8 +90,8 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:textColor="@color/black"
                 android:gravity="left"
-                android:drawableRight="@drawable/ic_baseline_navigate_next_24"
-                />
+                android:drawableRight="@drawable/ic_baseline_navigate_next_24" />
+
             <Button
                 android:id="@+id/btnLichsudatkham"
                 android:layout_width="360dp"
@@ -104,8 +106,8 @@
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"
                 android:gravity="left"
-                android:drawableRight="@drawable/ic_baseline_navigate_next_24"
-                />
+                android:drawableRight="@drawable/ic_baseline_navigate_next_24" />
+
             <Button
                 android:id="@+id/btnGioithieu"
                 android:layout_width="360dp"
@@ -120,8 +122,8 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"
-                android:drawableRight="@drawable/ic_baseline_navigate_next_24"
-                />
+                android:drawableRight="@drawable/ic_baseline_navigate_next_24" />
+
             <Button
                 android:id="@+id/btnHotline"
                 android:layout_width="360dp"
@@ -136,8 +138,8 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"
-                android:drawableRight="@drawable/ic_baseline_navigate_next_24"
-                />
+                android:drawableRight="@drawable/ic_baseline_navigate_next_24" />
+
             <Button
                 android:id="@+id/btnDangxuat"
                 android:layout_width="360dp"
@@ -152,20 +154,18 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"
-                android:drawableRight="@drawable/ic_baseline_navigate_next_24"
-                />
+                android:drawableRight="@drawable/ic_baseline_navigate_next_24" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-
         android:background="@color/white">
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="100dp"

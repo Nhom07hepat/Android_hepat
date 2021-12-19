@@ -27,6 +27,12 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="25dp"
         android:layout_marginLeft="25dp"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icon_tim2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <TabHost
         android:id="@android:id/tabhost"

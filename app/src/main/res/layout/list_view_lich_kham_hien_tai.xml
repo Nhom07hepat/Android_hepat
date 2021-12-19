@@ -1,99 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="380dp"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="8dp"
-    android:elevation="8dp"
-   android:layout_margin="20dp"
-    android:id="@+id/mCardview"
-    >
-<ImageView
-    android:id="@+id/imvKhunglichkhamhientai"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/nen_9"
-    android:layout_marginTop="10dp"/>
-    <TextView
-        android:id="@+id/txtHospitalNameht"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bệnh viện Từ Dũ"
-        android:textSize="20sp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="20dp">
 
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="100dp"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/txtHospitalTimeht"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="10:00 AM"
-        android:textSize="14sp"
-        android:drawableLeft="@drawable/ic_baseline_access_time_24"
-        app:layout_constraintTop_toBottomOf="@id/txtHospitalNameht"
-        app:layout_constraintLeft_toLeftOf="@id/imvKhunglichkhamhientai"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="20dp"
-        android:gravity="center"
-       />
-    <TextView
-        android:id="@+id/txtHospitalDateht"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="12/09/21"
-        android:drawableLeft="@drawable/ic_baseline_date_range_24"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/txtHospitalNameht"
-        app:layout_constraintLeft_toRightOf="@id/txtHospitalTimeht"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="120dp"
-        android:gravity="center"
-        />
-    <ImageView
-        android:id="@+id/imvConfrim"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:src="@drawable/ic_baseline_check_24"
-        app:layout_constraintTop_toBottomOf="@id/txtHospitalNameht"
-        app:layout_constraintRight_toLeftOf="@id/txtHospitalConfrirm"
-        app:layout_constraintLeft_toRightOf="@id/txtHospitalDateht"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="230dp"/>
-    <TextView
-        android:id="@+id/txtHospitalConfrirm"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:text="Đã xác nhận"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/txtHospitalNameht"
-        app:layout_constraintLeft_toRightOf="@id/imvConfrim"
-        android:layout_marginTop="70dp"
-        android:layout_marginLeft="250dp"
-        android:gravity="center"
-        />
-    <Button
-        android:id="@+id/btnHuy"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="Hủy"
-        android:backgroundTint="#DDE6E5"
-        android:textColor="@color/black"
-        app:layout_constraintTop_toBottomOf="@id/txtHospitalTimeht"
-        app:layout_constraintLeft_toLeftOf="@id/imvKhunglichkhamhientai"
-        android:layout_marginLeft="50dp"
-     android:layout_marginTop="110dp"
-        />
-    <Button
-        android:id="@+id/btnChinhsua"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="Chỉnh sửa"
-        android:backgroundTint="#37D16D"
-        app:layout_constraintTop_toBottomOf="@id/txtHospitalTimeht"
-        android:layout_marginTop="110dp"
-        app:layout_constraintRight_toRightOf="@id/imvKhunglichkhamhientai"
-        android:layout_marginLeft="200dp"
-        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mCardview"
+            app:cardCornerRadius="20dp"
+            android:elevation="8dp"
+            android:backgroundTint="#ECF0ED"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="380dp">
 
-</androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/txtHospitalNameht"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bệnh viện Từ Dũ"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TableRow android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/txtHospitalTimeht"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="10:00 AM"
+                            android:textSize="14sp"
+                            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/txtHospitalDateht"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="12/09/21"
+                            android:drawableLeft="@drawable/ic_baseline_date_range_24"
+                            android:layout_marginStart="10dp"
+                            android:textSize="14sp"
+                            android:gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/txtHospitalConfrirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="Đã xác nhận"
+                            android:drawableLeft="@drawable/ic_baseline_check_24"
+                            android:layout_marginStart="10dp"
+                            android:textSize="14sp"
+                            android:gravity="center" />
+                    </TableRow>
+                </TableLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center">
+                    <Button
+                        android:id="@+id/btnHuy"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="Hủy"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"/>
+                    <Button
+                        android:id="@+id/btnChinhsua"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:text="Chỉnh sửa"
+                        android:backgroundTint="#37D16D" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</LinearLayout>

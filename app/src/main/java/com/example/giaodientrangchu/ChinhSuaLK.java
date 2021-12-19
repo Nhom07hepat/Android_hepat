@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class ChinhSuaLK extends AppCompatActivity {
     int id;
     private TextView txtName, txtNgayDat, txtGioDat;
     private Button btnCS, btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
+    private ImageButton imbtnBack;
     Dialog dialog;
     public static final String Bv = "Bệnh viện ";
     public static final String Ngaydat = "Ngày đặt";
@@ -34,6 +36,7 @@ public class ChinhSuaLK extends AppCompatActivity {
         txtNgayDat = findViewById(R.id.txtNgayDat);
         txtGioDat = findViewById(R.id.txtGioDat);
         btnCS = findViewById(R.id.btnChinhSuaLK);
+        imbtnBack = findViewById(R.id.imbtnBack);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
@@ -54,6 +57,14 @@ public class ChinhSuaLK extends AppCompatActivity {
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 String date = dayOfMonth + "/" + month + "/"+ year;
                 txtNgayDat.setText(date);
+            }
+        });
+
+        imbtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ChinhSuaLK.this,LichKham.class);
+                startActivity(intent);
             }
         });
 

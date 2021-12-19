@@ -5,17 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.fragment.tuvan_fragment"
     android:background="#34D16D">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="#34D16D">
+
             <TextView
                 android:id="@+id/txtKQ"
                 android:layout_width="match_parent"
@@ -27,17 +30,16 @@
                 android:textSize="24sp"
                 android:layout_marginLeft="10dp"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_centerVertical="true"
         android:background="@drawable/khunggio"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/txtName1"
@@ -55,19 +57,18 @@
             android:text="Choáng váng là cảm giác thấy toàn bộ sức lực bị suy yếu tới mức không thể hoạt động gì được, cả về mặt thể chất lẫn tinh thần."
             android:textColor="@color/black"
             android:textSize="18sp" />
-
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:background="@drawable/khunggio"
         android:orientation="vertical"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:padding="10dp">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/txtName2"
@@ -87,6 +88,7 @@
             android:textSize="18sp" />
 
     </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,11 +103,9 @@
                 android:id="@+id/recBV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                />
+                android:layout_margin="10dp" />
 
         </LinearLayout>
-
     </ScrollView>
 
 
