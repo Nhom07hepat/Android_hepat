@@ -70,7 +70,10 @@
         <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/tab_da_huy.xml" value="0.25052083333333336" />
         <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/tab_hien_tai.xml" value="0.25052083333333336" />
         <entry key="..\:/Sem5/Android_hepat/app/src/main/res/menu/menu_bottom_nav.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/background_calendar.xml" value="0.20462962962962963" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/bg_dialog.xml" value="0.2203125" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/ic_back.xml" value="0.20462962962962963" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.20462962962962963" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/selector.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_binhluan.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_booking.xml" value="0.20416666666666666" />
@@ -83,6 +86,7 @@
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_lich_su_kham.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_navigation.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_thong_bao.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_thongtin_booking.xml" value="0.1" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_thongtin_tv.xml" value="0.20416666666666666" />
