@@ -100,7 +100,10 @@ public class LichKham extends AppCompatActivity {
                     case R.id.action_lich:
                         break;
                     case R.id.action_qr:
-                        break;
+                        startActivity(new Intent(getApplicationContext(),Activity_QR.class));
+                        finish();
+                        overridePendingTransition(0,0);
+                        return;
                     case R.id.action_thongbao:
                         startActivity(new Intent(getApplicationContext(),ThongBao_Activity.class));
                         finish();

@@ -75,7 +75,10 @@ public class ThongBao_Activity extends AppCompatActivity {
                       overridePendingTransition(0,0);
                       return;
                   case R.id.action_qr:
-                      break;
+                      startActivity(new Intent(getApplicationContext(),Activity_QR.class));
+                      finish();
+                      overridePendingTransition(0,0);
+                      return;
                   case R.id.action_thongbao:
                       break;
                   case R.id.action_taikhoan:
