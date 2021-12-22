@@ -63,7 +63,7 @@
             <Button
                 android:backgroundTint="#22DD72"
                 android:layout_marginTop="40dp"
-                android:id="@+id/txtBooking"
+                android:id="@+id/btnXemTB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"

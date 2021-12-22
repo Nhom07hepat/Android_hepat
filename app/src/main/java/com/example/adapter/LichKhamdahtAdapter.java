@@ -21,7 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class LichKhamdahtAdapter extends RecyclerView.Adapter<LichKhamdahtAdapter.LichKhamDaHtVH>  {
+public class
+LichKhamdahtAdapter extends RecyclerView.Adapter<LichKhamdahtAdapter.LichKhamDaHtVH>  {
     ArrayList<LichKhamDaht> lichKhamDahts;
     Context context;
 
