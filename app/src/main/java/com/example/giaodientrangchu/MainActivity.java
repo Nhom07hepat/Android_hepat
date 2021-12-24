@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerOnItemCli
                     case R.id.action_home:
                         break;
                     case R.id.action_lich:
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), LichKham.class);
                         startActivity(intent);
                         return;
                     case R.id.action_qr:
