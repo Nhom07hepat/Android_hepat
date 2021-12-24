@@ -20,21 +20,24 @@
         app:frameAspectRatioHeight="1"
         app:frameSize="0.75"
         app:frameThickness="2dp"
-        app:maskColor="#77000000"
-       />
+        app:maskColor="#77000000">
+    </com.budiyev.android.codescanner.CodeScannerView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:orientation="horizontal">
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="280dp">
 
         <Button
             android:id="@+id/btnThoat"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:backgroundTint="#37D16D"
+            android:drawableRight="@drawable/ic_baseline_exit_to_app_24"
             android:text="Thoát"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:textStyle="bold"
+            />
+    </TableLayout>
 </FrameLayout>
