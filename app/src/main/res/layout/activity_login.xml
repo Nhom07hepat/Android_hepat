@@ -26,15 +26,14 @@
         app:layout_constraintLeft_toLeftOf="parent"/>
 
 
-    <ImageView
-        android:id="@+id/imvGoogle"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/google_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/txtdangnhapvoi"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/icon_google" />
+        android:layout_marginTop="10dp"/>
 
     <ImageView
         android:id="@+id/imvheart"

@@ -1,41 +1,65 @@
 {
   "project_info": {
-    "project_number": "847990234036",
-    "project_id": "hepat-67291",
-    "storage_bucket": "hepat-67291.appspot.com"
+    "project_number": "375446387611",
+    "project_id": "hepat-15c0b",
+    "storage_bucket": "hepat-15c0b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:847990234036:android:23f57927b256cfa3a0b0e1",
+        "mobilesdk_app_id": "1:375446387611:android:a110b948419d2875a2bf3e",
         "android_client_info": {
           "package_name": "com.example.giaodientrangchu"
         }
       },
       "oauth_client": [
         {
-          "client_id": "847990234036-d2phithlotcgcc09i00i04716m7ct3uh.apps.googleusercontent.com",
+          "client_id": "375446387611-5388alheqb56kdubl196gpvo0pslr8r0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.giaodientrangchu",
-            "certificate_hash": "5f9a5c0174f3620d0eb4da8adf436cad59ca978e"
+            "certificate_hash": "fd5004e4a6c871783c5988156128fd69a05905d6"
           }
         },
         {
-          "client_id": "847990234036-g9glaje7efb1utjmpuqusqurvc3rc7pa.apps.googleusercontent.com",
+          "client_id": "375446387611-989e7rcfb66o47srlvtcn0vh6cdpbfur.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.giaodientrangchu",
+            "certificate_hash": "51ad1062865bb9362f91c05d53b851de8052fa08"
+          }
+        },
+        {
+          "client_id": "375446387611-e8lmupk1d3665juk2f3qrn3juj24p1l4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.giaodientrangchu",
+            "certificate_hash": "7431903da9a26548fd96a3c2a77f061b43bf1dbf"
+          }
+        },
+        {
+          "client_id": "375446387611-g6efsnihu7s47hu9uf67tb59u8inbjc8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.giaodientrangchu",
+            "certificate_hash": "9ba4f141dc0f8c8d4c496f1af425da16d952945b"
+          }
+        },
+        {
+          "client_id": "375446387611-kubf8tiqg5pli61ehrl1jq99pqkqpe9g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBa_6YlenPHKF7RKgXGgO0Gbp4TjtaQ0ns"
+          "current_key": "AIzaSyAbGw01py4SJSqrxE4uYyqm-f9gm2vyWSo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "847990234036-g9glaje7efb1utjmpuqusqurvc3rc7pa.apps.googleusercontent.com",
+              "client_id": "375446387611-kubf8tiqg5pli61ehrl1jq99pqkqpe9g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
