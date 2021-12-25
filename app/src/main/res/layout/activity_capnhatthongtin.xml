@@ -54,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:hint="vd: Nguyễn Văn A"
             android:textSize="20sp" />
 
         <TextView
@@ -71,6 +72,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:inputType="date"
+            android:text="__/__/____"
+            android:hint="vd: 01/01/1991"
             android:textSize="20sp" />
 
         <TextView
@@ -106,6 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:hint="vd: 0987654321"
             android:textSize="20sp" />
 
         <TextView
@@ -123,7 +128,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:hint="vd: số 01, Phạm Đình chiểu, Bến Nghé, q.1,HCM"/>
 
         <Button
             android:id="@+id/btnCapNhatTT"
