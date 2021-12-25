@@ -291,4 +291,98 @@
         tools:ignore="MissingConstraints" />
 
 
+    <!--        <TableLayout-->
+        <!--            android:id="@+id/tbMenu"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:shrinkColumns="*"-->
+        <!--            android:stretchColumns="*"-->
+        <!--            android:background="@color/white">-->
+        <!--            <TableRow>-->
+
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnHomePage"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:backgroundTint="#B5F4B7"-->
+        <!--                    android:src="@drawable/home"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnLichKham"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:minWidth="48dp"-->
+        <!--                    android:minHeight="48dp"-->
+        <!--                    android:src="@drawable/lichkham_3"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnMaQR"-->
+        <!--                    android:layout_width="60dp"-->
+        <!--                    android:layout_height="80dp"-->
+        <!--                    android:background="#37D16D"-->
+        <!--                    android:src="@drawable/qrcode_1"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnThongBao"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:minWidth="48dp"-->
+        <!--                    android:minHeight="48dp"-->
+        <!--                    android:src="@drawable/thongbao_4"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck" />-->
+
+        <!--                <ImageButton-->
+        <!--                    android:id="@+id/imbtnTaikhoan"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:background="@color/white"-->
+        <!--                    android:src="@drawable/ic_baseline_perm_identity_24"-->
+        <!--                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />-->
+        <!--            </TableRow>-->
+        <!--            <TableRow>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/trang_chu"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:layout_marginBottom="5dp"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/lich_kham"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:layout_marginBottom="5dp"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/thong_bao"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:layout_marginBottom="5dp"-->
+        <!--                    android:layout_column="3"/>-->
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/tai_khoan"-->
+        <!--                    android:layout_gravity="center"-->
+        <!--                    android:textSize="13dp"-->
+        <!--                    android:layout_marginBottom="5dp"-->
+        <!--                    />-->
+
+        <!--            </TableRow>-->
+        <!--        </TableLayout>-->
+
 </androidx.constraintlayout.widget.ConstraintLayout>
