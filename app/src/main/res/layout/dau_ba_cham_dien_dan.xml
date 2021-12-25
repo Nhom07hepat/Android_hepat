@@ -3,59 +3,69 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <Button
-        android:id="@+id/btnLuubaiviet"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/icon_save_1"
-        android:gravity="center_vertical"
-        android:text="Lưu bài viết              "
-        android:textColor="@color/black"
-        android:textSize="18sp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-    <Button
-        android:id="@+id/btnAnbaiviet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/icon_an_1"
-        android:gravity="center_vertical"
-        android:text="Ẩn bài viết              "
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnLuubaiviet"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnLuubaiviet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icon_save_1"
+            android:gravity="center_vertical"
+            android:text="Lưu bài viết              "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        <Button
+            android:id="@+id/btnAnbaiviet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icon_an_1"
+            android:gravity="center_vertical"
+            android:text="Ẩn bài viết              "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnLuubaiviet"/>
 
-    <Button
-        android:id="@+id/btnSaochep"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/icon_link_1"
-        android:text="Sao chép liên kết"
-        android:textColor="@color/black"
-        android:textSize="18sp"
+        <Button
+            android:id="@+id/btnSaochep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icon_link_1"
+            android:text="Sao chép liên kết"
+            android:textColor="@color/black"
+            android:textSize="18sp"
 
-        android:gravity="center_vertical"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAnbaiviet" />
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnAnbaiviet" />
 
-    <Button
-        android:id="@+id/btnBaiVietYeuThich"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:drawableLeft="@drawable/icon_yeuthich_1"
-        android:text="Thêm vào bài viết yêu thích"
-        android:textColor="@color/black"
-        android:gravity="center_vertical"
-        android:textSize="18sp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnSaochep"/>
+        <Button
+            android:id="@+id/btnBaiVietYeuThich"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/icon_yeuthich_1"
+            android:text="Thêm vào bài viết yêu thích"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnSaochep"/>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

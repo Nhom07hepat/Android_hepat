@@ -60,4 +60,17 @@ public class DB_DienDan extends SQLiteOpenHelper {
         return postdiendans;
 
     }
+    public int deleteDD(int id) {
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        return sqLiteDatabase.delete("tbl_DienDan","id=?",new String[]{String.valueOf(id)});
+    }
+
+    public int updateDD(Postdiendan p) {
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("name", p.getName());
+        values.put("time",p.getTime());
+        values.put("content", p.getContent());
+        return sqLiteDatabase.update("tbl_DienDan",values, "id=?",new String[]{String.valueOf(p.getId())});
+    }
 }

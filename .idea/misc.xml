@@ -24,8 +24,10 @@
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/bg_dialog.xml" value="0.2203125" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_binhluan.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_booking.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_chinh_sua_dd.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_chinh_sua_lk.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_dat_lich2.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_dien_dan.xml" value="0.15081521739130435" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_lich_kham.xml" value="0.15081521739130435" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
@@ -38,13 +40,18 @@
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_tu_van1.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_verifyotp.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/custom_dialog.xml" value="0.14945652173913043" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/custom_layout.xml" value="0.1921875" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/dau_ba_cham_dien_dan.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/item_list_bv.xml" value="0.22" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/list_view_dien_dan.xml" value="0.25" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/list_view_lich_kham_da_hoan_thanh.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/list_view_lich_kham_da_huy.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/list_view_lich_kham_hien_tai.xml" value="0.25" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/nut_them_cua_dien_dan.xml" value="0.18" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/tab_da_hoan_thanh.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/tab_da_huy.xml" value="0.15625" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/tab_hien_tai.xml" value="0.15625" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/test.xml" value="0.22" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/trieuchung1_layout_custom.xml" value="0.20416666666666666" />
         <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_gioithieuve_hepat.xml" value="0.17685185185185184" />
         <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_lich_kham.xml" value="0.264" />
