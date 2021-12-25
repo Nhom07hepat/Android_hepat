@@ -23,6 +23,8 @@ public class DatLich2_Activity extends AppCompatActivity {
     private TextView txtNgayDat, txtGioDat;
     private Button btnLich, btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
     Dialog dialog;
+    Boolean isDay=false;
+    Boolean isTime=false;
 
     public static final String Bv = "Bệnh viện ";
     public static final String Ngaydat = "Ngày đặt";
@@ -64,6 +66,7 @@ public class DatLich2_Activity extends AppCompatActivity {
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 String date = dayOfMonth + "/" + month + "/"+ year;
                 txtNgayDat.setText(date);
+                isDay=true;
             }
         });
         
@@ -72,48 +75,57 @@ public class DatLich2_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 txtGioDat.setText("7h - 8h");
+                isTime=true;
             }
+
         });
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtGioDat.setText("9h - 10h");
+                isTime=true;
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtGioDat.setText("13h - 14h");
+                isTime=true;
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtGioDat.setText("15h - 16h");
+                isTime=true;
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtGioDat.setText("8h - 9h");
+                isTime=true;
             }
         });
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtGioDat.setText("10h - 11h");
+                isTime=true;
             }
         });
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtGioDat.setText("14h - 15h");
+                isTime=true;
             }
         });
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 txtGioDat.setText("16h - 17h");
+                isTime=true;
             }
         });
         dialog = new Dialog(DatLich2_Activity.this);
@@ -148,8 +160,23 @@ public class DatLich2_Activity extends AppCompatActivity {
         btnLich.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                dialog.show();
-
+                if (isTime==true & isDay==true) {
+                    dialog.show();
+                }
+                else {
+                    final Dialog dialog=new Dialog(DatLich2_Activity.this);
+                    dialog.setContentView(R.layout.dialog_batloidatlich);
+                    dialog.setCanceledOnTouchOutside(false);
+                    Button btnokerror=dialog.findViewById(R.id.btnOkerror);
+                    btnokerror.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.dismiss();
+                        }
+                    });
+                    dialog.show();
+                  //  Toast.makeText(DatLich2_Activity.this,"Vui lòng chọn ngày và giờ đặt khám",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
