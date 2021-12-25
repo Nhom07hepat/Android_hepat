@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:textSize="20sp"
-            android:hint="vd: số 01, Phạm Đình chiểu, Bến Nghé, q.1,HCM"/>
+            android:hint="vd: số 05, Phạm Đình chiểu, Bến Nghé, q.1,HCM"/>
 
         <Button
             android:id="@+id/btnCapNhatTT"

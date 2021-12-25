@@ -81,9 +81,7 @@ public class capnhatthongtin extends AppCompatActivity {
                     Toast.makeText(capnhatthongtin.this, "⚠️Không được bỏ trống Số điện thoại! ", Toast.LENGTH_LONG).show();}
                            else if (strDiaChi.matches("")) {
                     Toast.makeText(capnhatthongtin.this, "⚠️Không được bỏ trống Địa chỉ! ", Toast.LENGTH_LONG).show();}
-                else if (strTen.matches("")||strNgay.matches("")||strGioiTinh.matches("")||strSdt.matches("")||strDiaChi.matches("")) {
-                    Toast.makeText(capnhatthongtin.this, "⚠️Không được bỏ trống trường nào! ", Toast.LENGTH_LONG).show();
-                } else {
+                 else {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString(Hoten, edtHoTen.getText().toString());
                     editor.putString(NgaySinh, edtNgaySinh.getText().toString());
