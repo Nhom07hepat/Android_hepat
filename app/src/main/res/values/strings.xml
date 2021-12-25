@@ -83,5 +83,6 @@
     <string name="td5k3">☘️ KHOẢNG CÁCH: Giữ khoảng cách khi tiếp xúc với người khác.  </string>
     <string name="td5k4">☘️ KHAI BÁO Y TẾ: thực hiện khai báo y tế trên App NCOVI;\ncài đặt ứng dụng BlueZone tại địa chỉ https://www.bluezone.gov.vn để được cảnh báo nguy cơ lây nhiễm COVID-19.\n Khi có dấu hiệu sốt, ho, khó thở hãy gọi điện cho đường dây nóng của Bộ Y tế 19009095 hoặc đường dây nóng của y tế địa phương để được tư vấn, hỗ trợ, hướng dẫn đi khám bệnh đảm bảo an toàn. </string>
     <string name="td5k5">☘️ KHÔNG TỤ TẬP đông người.</string>
+    <string name="errorlichkham">Vui lòng chọn ngày và giờ đặt khám</string>
 
 </resources>
