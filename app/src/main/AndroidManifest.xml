@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.giaodientrangchu">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
@@ -12,9 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiaodienTrangChu.NoActionBar">
-        <activity
-            android:name=".ChinhSuaDD"
-            android:exported="false" />
         <activity
             android:name=".Activity_QR"
             android:exported="true" />
@@ -70,7 +65,9 @@
             android:name=".Login_Activity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize"></activity>
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
         <activity
             android:name=".Booking_Activity"
             android:exported="true" />

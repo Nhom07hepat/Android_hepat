@@ -2,9 +2,11 @@ package com.example.giaodientrangchu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -21,6 +23,8 @@ public class capnhatthongtin extends AppCompatActivity {
     String[] GioiTinh = new String[]{
             "Nam", "Nữ"
     };
+    String strTen, strNgay, strGioiTinh,strSdt,strDiaChi;
+    Dialog dialog;
     SharedPreferences sharedPreferences;
     public static final String SHARE_PREFERENCES = "share_preferences";
     public  static final String Hoten ="Họ tên";
@@ -35,8 +39,13 @@ public class capnhatthongtin extends AppCompatActivity {
         setContentView(R.layout.activity_capnhatthongtin);
         edtHoTen = findViewById(R.id.edtHoTen);
         edtNgaySinh = findViewById(R.id.edtNgaySinh);
+        edtNgaySinh.setInputType(InputType.TYPE_CLASS_DATETIME
+                | InputType.TYPE_DATETIME_VARIATION_DATE);
         edtSDT = findViewById(R.id.edtSDT);
+        edtSDT.setInputType(InputType.TYPE_CLASS_PHONE);
         edtDiaChi = findViewById(R.id.edtDiaChi);
+        edtDiaChi.setInputType(InputType.TYPE_CLASS_TEXT |
+                InputType.TYPE_TEXT_VARIATION_NORMAL);
         spinnerGT = findViewById(R.id.spinerGT);
         btnCapNhat = findViewById(R.id.btnCapNhatTT);
         imbBack = findViewById(R.id.imbtnBack);
@@ -58,24 +67,37 @@ public class capnhatthongtin extends AppCompatActivity {
         btnCapNhat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(Hoten, edtHoTen.getText().toString());
-                editor.putString(NgaySinh, edtNgaySinh.getText().toString());
-                editor.putString(GT, spinnerGT.getSelectedItem().toString());
-                editor.putString(SDT, edtSDT.getText().toString());
-                editor.putString(DiaChi, edtDiaChi.getText().toString());
-                editor.apply();
-                Intent intent = new Intent(capnhatthongtin.this,thongtincanhan.class);
-                startActivity(intent);
-                Toast.makeText(capnhatthongtin.this,"Saved",Toast.LENGTH_SHORT).show();
 
-//                String hoten = edtHoTen.getText().toString();
-//                String ngaysinh = edtNgaySinh.getText().toString();
-//                String gioitinh = spinnerGT.getSelectedItem().toString();
-//                String sdt = edtSDT.getText().toString();
-//                String diachi = edtDiaChi.getText().toString();
-//                truyenDL(hoten,ngaysinh,gioitinh,sdt,diachi);
+               strTen= edtHoTen.getText().toString();
+               strNgay= edtNgaySinh.getText().toString();
+               strGioiTinh= spinnerGT.getSelectedItem().toString();
+               strSdt= edtSDT.getText().toString();
+               strDiaChi=edtDiaChi.getText().toString();
+                if(strTen.matches("")) {
+                    Toast.makeText(capnhatthongtin.this, "⚠️Không được bỏ trống Tên!", Toast.LENGTH_LONG).show();}
+                else if (strNgay.matches("__/__/____")) {
+                    Toast.makeText(capnhatthongtin.this, "⚠️Không được bỏ trống Ngày sinh! ", Toast.LENGTH_LONG).show();}
+                           else if (strSdt.matches("")) {
+                    Toast.makeText(capnhatthongtin.this, "⚠️Không được bỏ trống Số điện thoại! ", Toast.LENGTH_LONG).show();}
+                           else if (strDiaChi.matches("")) {
+                    Toast.makeText(capnhatthongtin.this, "⚠️Không được bỏ trống Địa chỉ! ", Toast.LENGTH_LONG).show();}
+                else if (strTen.matches("")||strNgay.matches("")||strGioiTinh.matches("")||strSdt.matches("")||strDiaChi.matches("")) {
+                    Toast.makeText(capnhatthongtin.this, "⚠️Không được bỏ trống trường nào! ", Toast.LENGTH_LONG).show();
+                } else {
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString(Hoten, edtHoTen.getText().toString());
+                    editor.putString(NgaySinh, edtNgaySinh.getText().toString());
+                    editor.putString(GT, spinnerGT.getSelectedItem().toString());
+                    editor.putString(SDT, edtSDT.getText().toString());
+                    editor.putString(DiaChi, edtDiaChi.getText().toString());
+                    editor.apply();
+                    Intent intent = new Intent(capnhatthongtin.this, thongtincanhan.class);
+                    startActivity(intent);
+                    Toast.makeText(capnhatthongtin.this, "✔ Cập nhật thành công!", Toast.LENGTH_SHORT).show();
+                }
             }
+
+
         });
         imbBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,14 +108,4 @@ public class capnhatthongtin extends AppCompatActivity {
         });
     }
 
-//    public void truyenDL (String hoten, String ngaysinh, String gioitinh, String sdt, String diachi){
-//        Intent intent = new Intent(capnhatthongtin.this,thongtincanhan.class);
-//        intent.putExtra(Hoten,hoten);
-//        intent.putExtra(NgaySinh,ngaysinh);
-//        intent.putExtra(GT,gioitinh);
-//        intent.putExtra(SDT,sdt);
-//        intent.putExtra(DiaChi,diachi);
-//        startActivity(intent);
-//
-//    }
 }
