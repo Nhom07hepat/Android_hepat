@@ -5,41 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DienDan"
-    android:background="#FAF0F0"
-    >
-<TextView
-    android:id="@+id/txtForum"
-    android:layout_width="match_parent"
-    android:layout_height="90dp"
-    android:text="Diễn Đàn"
-    android:textColor="@color/black"
-    android:textSize="30sp"
-    android:background="#37D16D"
-    android:textStyle="bold"
-    android:gravity="center"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"/>
+    android:background="#FAF0F0">
 
-    <ImageButton
-        android:id="@+id/imbtnBackdiendan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="25dp"
-        android:background="@null"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/icon_tim2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtForum"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#37D16D"
+            android:gravity="center"
+            android:text="Diễn đàn"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imbtnBackdiendan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_tim2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
 
     <ScrollView
 
@@ -47,19 +51,18 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/txtForum"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        >
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+        android:padding="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recDienDan"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="20dp"
-        />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recDienDan"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="20dp" />
         </LinearLayout>
     </ScrollView>
 

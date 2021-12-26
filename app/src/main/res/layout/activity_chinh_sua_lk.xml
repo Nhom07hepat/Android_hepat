@@ -16,87 +16,43 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <TextView
-                android:id="@+id/txtTital"
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
-                android:background="#37D16D"
-                android:text="Sửa lịch khám"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                app:layout_constraintTop_toTopOf="parent"/>
+                tools:ignore="MissingConstraints">
 
-            <ImageButton
-                android:id="@+id/imbtnBack"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                android:background="@null"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="25dp"/>
+                <TextView
+                    android:id="@+id/txtTital"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="#37D16D"
+                    android:gravity="center"
+                    android:text="Sửa lịch khám"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/icon_tim2"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-            <!--            <LinearLayout-->
+                <ImageButton
+                    android:id="@+id/imbtnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@null"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <!--                android:orientation="vertical"-->
-            <!--                android:id="@+id/linearLayout2"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="150dp"-->
-            <!--                android:background="#34D16D"-->
-            <!--                app:layout_constraintBottom_toTopOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="parent">-->
-
-            <!--            </LinearLayout>-->
-            <!--            <LinearLayout-->
-            <!--                android:id="@+id/linearLayout"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_marginTop="20dp"-->
-            <!--                android:gravity="center_vertical"-->
-
-            <!--                app:layout_constraintTop_toTopOf="parent"-->
-            <!--                app:layout_constraintVertical_bias="0.08"-->
-            <!--                tools:layout_editor_absoluteX="1dp">-->
-
-            <!--                <ImageButton-->
-            <!--                    android:id="@+id/imbtnBack"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:backgroundTint="#34D16D"-->
-            <!--                    android:src="@drawable/ic_back"-->
-            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                    app:layout_constraintHorizontal_bias="0.0"-->
-            <!--                    app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--                    app:layout_constraintRight_toRightOf="parent"-->
-            <!--                    app:layout_constraintTop_toTopOf="parent"-->
-            <!--                    app:layout_constraintVertical_bias="0.056"-->
-            <!--                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />-->
-
-            <!--                <TextView-->
-            <!--                    android:id="@+id/txtTital"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:background=" #34D16D"-->
-            <!--                    android:gravity="center"-->
-            <!--                    android:text="Chỉnh sửa lịch khám"-->
-            <!--                    android:textColor="@color/black"-->
-            <!--                    android:textSize="28sp"-->
-            <!--                    android:layout_gravity="center"-->
-
-            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--                    app:layout_constraintTop_toTopOf="parent"-->
-            <!--                    app:layout_constraintVertical_bias="0.049"-->
-            <!--                    tools:layout_editor_absoluteX="1dp" />-->
-            <!--            </LinearLayout>-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/icon_tim2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </RelativeLayout>
 
             <FrameLayout
                 android:id="@+id/frameLayout"
@@ -104,7 +60,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtTital"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
                 android:layout_marginTop="20dp"
                 tools:ignore="MissingConstraints">
 

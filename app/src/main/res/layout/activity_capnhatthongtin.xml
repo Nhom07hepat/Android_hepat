@@ -75,7 +75,6 @@
             android:layout_margin="5dp"
             android:hint="Vd: 01/01/1991"
             android:inputType="date"
-            android:text="__/__/____"
             android:textSize="20sp" />
 
         <TextView

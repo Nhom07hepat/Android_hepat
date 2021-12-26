@@ -5,174 +5,205 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GioithieuveHepat">
-<TextView
-    android:id="@+id/txtVeHepat"
-    android:layout_width="match_parent"
-    android:layout_height="90dp"
-    android:background="#37D16D"
-    android:text="VỀ HEPAT"
-    android:textColor="@color/black"
-    android:textSize="30sp"
-    android:textStyle="bold"
-    android:gravity="center"
-    app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageButton
-        android:id="@+id/imbtnBackVeHepat"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        android:background="@null"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="25dp"/>
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/icon_tim2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtVeHepat"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#37D16D"
+            android:gravity="center"
+            android:text="VỀ HEPAT"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imbtnBackVeHepat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_tim2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/txtVeHepat"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp">
+        android:layout_height="match_parent"
+android:padding="20dp">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/hepat"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="26sp"/>
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/noi_dung_hepat"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
                 android:text="@string/giaiphap"
-                android:textStyle="bold"
-                android:textSize="26sp"/>
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/giaiphap_y1"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/giaiphap_y2"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/giaiphap_y3"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/giaiphap_y4"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/doituong"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="26sp"/>
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/doituong_y1"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/doituong_y2"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:text="@string/doituong_y3"/>
+                android:text="@string/doituong_y3"
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chuchnang"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="26sp"/>
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chucnang_y1"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chucnang_y2"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chucnang_y3"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chucnang_y4"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chitiet"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="26sp"/>
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chitiet_y1"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/chitiet_y2"
 
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:text="@string/chitiet_y3"
-                android:textSize="24sp"/>
+                android:textSize="24sp" />
         </LinearLayout>
     </ScrollView>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

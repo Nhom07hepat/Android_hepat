@@ -184,7 +184,7 @@ public class DatLich2_Activity extends AppCompatActivity {
         imbtnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(DatLich2_Activity.this,MainActivity.class);
+                Intent intent=new Intent(DatLich2_Activity.this,Booking_Activity.class);
                 startActivity(intent);
             }
         });

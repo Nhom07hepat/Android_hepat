@@ -6,45 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".thongtincanhan">
 
-    <TextView
-        android:id="@+id/txtTital"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="90dp"
-        android:background="#37D16D"
-        android:text="Thông tin cá nhân"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"/>
+        tools:ignore="MissingConstraints">
 
-    <ImageButton
-        android:id="@+id/imbtnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        android:background="@null"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="25dp"
-        android:layout_marginLeft="25dp"/>
+        <TextView
+            android:id="@+id/txtTital"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#37D16D"
+            android:gravity="center"
+            android:text="Thông tin cá nhân"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/icon_tim2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        <ImageButton
+            android:id="@+id/imbtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:background="@null"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/icon_tim2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.252"
-        tools:layout_editor_absoluteX="0dp"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="10dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -180,11 +191,7 @@
                 android:textSize="20sp"
                 android:backgroundTint="#34D16D"
                 android:layout_marginStart="20dp" />
-
-
         </LinearLayout>
-
     </LinearLayout>
-
-
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
