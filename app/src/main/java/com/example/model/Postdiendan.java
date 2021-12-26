@@ -1,8 +1,9 @@
 package com.example.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Postdiendan {
+public class Postdiendan implements Serializable {
     int id;
     String name;
     String time;

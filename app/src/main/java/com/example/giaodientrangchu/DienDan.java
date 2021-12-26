@@ -1,5 +1,6 @@
 package com.example.giaodientrangchu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,6 +15,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.text.format.Time;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.ArrayAdapter;
@@ -33,7 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class DienDan extends AppCompatActivity {
-    ImageButton imbtnBack, imbtnAdd,imbtnMore;
+    ImageButton imbtnBack, imbtnAdd;
     ArrayList<Postdiendan> postdiendans;
 
     RecyclerView recDienDan;
@@ -57,7 +59,7 @@ public class DienDan extends AppCompatActivity {
     private void addDienDan() {
         androidx.appcompat.app.AlertDialog.Builder builder = new AlertDialog.Builder(DienDan.this);
         builder.setTitle("Xác nhận !!!");
-        builder.setMessage("Bạn chắc chắn muốn đăng bài lên diên đàn này?");
+        builder.setMessage("Bạn chắc chắn muốn đăng bài lên diễn đàn này?");
         builder.setCancelable(false);
         builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
             @Override
@@ -72,8 +74,43 @@ public class DienDan extends AppCompatActivity {
                 recDienDan.setLayoutManager(manager);
             }
         });
-        builder.setNegativeButton("No", null);
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                androidx.appcompat.app.AlertDialog.Builder builder = new AlertDialog.Builder(DienDan.this);
+                builder.setTitle("Xác nhận !!!");
+                builder.setMessage("Bạn muốn hủy bài đăng này?");
+                builder.setCancelable(false);
+                builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Intent intent = new Intent(DienDan.this,MainActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        ADD();
+                    }
+                });
+                builder.show();
+
+            }
+        });
         builder.show();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        DB_DienDan db_dienDan = new DB_DienDan(this);
+        postdiendans = db_dienDan.getAllDienDan();
+        adapter = new DiendanAdapter(postdiendans,this);
+        recDienDan.setAdapter(adapter);
+        LinearLayoutManager layout = new LinearLayoutManager(this);
+        layout.setOrientation(RecyclerView.VERTICAL);
+        recDienDan.setLayoutManager(layout);
     }
 
     private void addEvents() {
@@ -89,44 +126,55 @@ public class DienDan extends AppCompatActivity {
         imbtnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Dialog dialog=new Dialog(DienDan.this);
-                dialog.setContentView(R.layout.nut_them_cua_dien_dan);
-                TextView txtName = dialog.findViewById(R.id.txtUserName);
-                sharedPreferences = getSharedPreferences(SHARE_PREFERENCES,MODE_PRIVATE);
-                String hoten = sharedPreferences.getString(Hoten, null);
-                if(hoten != null){
-                    txtName.setText(hoten);
-                }
-                Button btnDangBai = dialog.findViewById(R.id.btnDangBai);
-                EditText edtContent = dialog.findViewById(R.id.edtContent);
-                dialog.show();
-
-                btnDangBai.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        String name = txtName.getText().toString().trim();
-                        String mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-                        String time = mydate.trim();
-                        String content = edtContent.getText().toString().trim();
-                        DB_DienDan db_dienDan = new DB_DienDan(DienDan.this);
-                        Postdiendan p = new Postdiendan(name, time, content);
-                        long result = db_dienDan.addDienDan(p);
-                        if (result > 0){
-                            Toast.makeText(DienDan.this,"Success", Toast.LENGTH_SHORT).show();
-                        }else {
-                            Toast.makeText(DienDan.this,"Fail", Toast.LENGTH_SHORT).show();
-                        }
-                        dialog.dismiss();
-                        addDienDan();
-                    }
-                });
+           ADD();
 
 
             }
         });
 
+
     }
 
+public void ADD(){
+    final Dialog dialog=new Dialog(DienDan.this);
+    dialog.setContentView(R.layout.nut_them_cua_dien_dan);
+    TextView txtName = dialog.findViewById(R.id.txtUserName);
+    sharedPreferences = getSharedPreferences(SHARE_PREFERENCES,MODE_PRIVATE);
+    String hoten = sharedPreferences.getString(Hoten, null);
+    if(hoten != null){
+        txtName.setText(hoten);
+    }
+
+    Button btnDangBai = dialog.findViewById(R.id.btnDangBai);
+    EditText edtContent = dialog.findViewById(R.id.edtContent);
+
+    dialog.show();
+    btnDangBai.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String name = txtName.getText().toString().trim();
+            String mydate = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
+            String time = mydate.trim();
+            String content = edtContent.getText().toString().trim();
+            if(content.equals("") || name.equals("")||time.equals("")){
+                Toast.makeText(DienDan.this,"Vui lòng nhập nội dung bài đăng",Toast.LENGTH_SHORT).show();
+            }
+            else{
+                addDienDan();
+                DB_DienDan db_dienDan = new DB_DienDan(DienDan.this);
+                Postdiendan p = new Postdiendan(name, time, content);
+                long result = db_dienDan.addDienDan(p);
+                if (result > 0){
+                    Toast.makeText(DienDan.this,"Success", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(DienDan.this,"Fail", Toast.LENGTH_SHORT).show();
+                }
+            }
+            dialog.dismiss();
+
+        }
+    });
+}
 
 
 //    private void loadData() {
@@ -144,7 +192,8 @@ public class DienDan extends AppCompatActivity {
 
         recDienDan=findViewById(R.id.recDienDan);
         imbtnBack=findViewById(R.id.imbtnBackdiendan);
-        imbtnMore=findViewById(R.id.imbtnMore);
         imbtnAdd=findViewById(R.id.imbtnAdd);
     }
+
+
 }
