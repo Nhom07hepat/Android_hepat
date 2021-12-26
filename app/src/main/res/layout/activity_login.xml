@@ -18,11 +18,12 @@
 
   <ImageView
       android:id="@+id/imvnenmo"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="420dp"
+      android:layout_height="670dp"
       android:src="@drawable/nenmo"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintRight_toRightOf="parent"/>
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
 
   <com.google.android.gms.common.SignInButton
         android:id="@+id/google_signin"
@@ -39,10 +40,10 @@
         android:layout_height="250dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="423dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/imvnenmo"
+        app:layout_constraintRight_toRightOf="@id/imvnenmo"
+        app:layout_constraintBottom_toBottomOf="@id/imvnenmo"
+        app:layout_constraintTop_toTopOf="@id/imvnenmo"
         app:srcCompat="@drawable/icon_hepat" />
 
     <Button
