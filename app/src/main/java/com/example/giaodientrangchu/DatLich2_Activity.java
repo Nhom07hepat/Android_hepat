@@ -22,6 +22,7 @@ public class DatLich2_Activity extends AppCompatActivity {
     private CalendarView calendarView;
     private TextView txtNgayDat, txtGioDat;
     private Button btnLich, btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8;
+    ImageButton imbtnBack;
     Dialog dialog;
     Boolean isDay=false;
     Boolean isTime=false;
@@ -58,6 +59,7 @@ public class DatLich2_Activity extends AppCompatActivity {
         btn6 = findViewById(R.id.btn6);
         btn7 = findViewById(R.id.btn7);
         btn8 = findViewById(R.id.btn8);
+        imbtnBack = findViewById(R.id.imbtnBack);
 
 
 
@@ -177,6 +179,13 @@ public class DatLich2_Activity extends AppCompatActivity {
                     dialog.show();
                   //  Toast.makeText(DatLich2_Activity.this,"Vui lòng chọn ngày và giờ đặt khám",Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+        imbtnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(DatLich2_Activity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
     }
