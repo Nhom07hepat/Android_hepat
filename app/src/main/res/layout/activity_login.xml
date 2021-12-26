@@ -7,30 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageviewdoctor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/icon_doctor"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
   <ImageView
       android:id="@+id/imvNen"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:src="@drawable/bgr_login"
-      />
-    <ImageView
-        android:id="@+id/imvnenmo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/nenmo"
-        />
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/bgr_login2"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      android:scaleType="centerCrop"/>
 
+  <ImageView
+      android:id="@+id/imvnenmo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/nenmo"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintRight_toRightOf="parent"/>
 
-    <com.google.android.gms.common.SignInButton
+  <com.google.android.gms.common.SignInButton
         android:id="@+id/google_signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

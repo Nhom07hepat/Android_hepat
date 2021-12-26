@@ -11,120 +11,63 @@
         <entry key="..\:/Admin/Downloads/DoAn/GiaodienTrangChu/app/src/main/res/layout/list_trieu_chung.xml" value="0.20416666666666666" />
         <entry key="..\:/Android/Android_hepat/app/src/main/res/drawable/color_nav.xml" value="0.1" />
         <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_booking.xml" value="0.1" />
-        <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_chinh_sua_lk.xml" value="0.1796875" />
-        <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_lich_kham.xml" value="0.11296296296296296" />
-        <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_lich_su_kham.xml" value="0.1796875" />
         <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_navigation.xml" value="0.1" />
+        <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_qr.xml" value="0.1796875" />
+        <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_qrcode.xml" value="0.1796875" />
         <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/activity_trang_user.xml" value="0.1" />
         <entry key="..\:/Android/Android_hepat/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Android/Android_hepat/app/src/main/res/menu/menu_bottom_nav.xml" value="0.1" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/drawable/ic_back.xml" value="0.14635416666666667" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_binhluan.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_booking.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_capnhatthongtin.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_chinh_sua_dd.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_chinh_sua_lk.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_dat_lich2.xml" value="0.25898520084566595" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_dien_dan.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_ds_benhvien.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_gioithieuve_hepat.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_ho_so.xml" value="0.176" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_lich_kham.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_lich_su_kham.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_login.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_navigation.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_qr.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_thong_bao.xml" value="0.264" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_thong_bao_uong_thuoc.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_thongtin_booking.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_thongtincanhan.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_trang_user.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_tu_van.xml" value="0.24666666666666667" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/activity_verifyotp.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/banner0.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/banner1.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/banner2.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/banner3.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/custom_dialog.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/custom_layout.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/dau_ba_cham_dien_dan.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/dialog_batloidatlich.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/dialog_dangxuat.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/dialog_hotline.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/fragment_blank.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/fragment_home.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment1.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment2.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment3.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment4.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/fragment_tuvan_fragment5.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/item_banner.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/item_list_bv.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/item_list_thongbao.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/list_trieu_chung.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/list_view_dien_dan.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/list_view_lich_kham_da_hoan_thanh.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/list_view_lich_kham_da_huy.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/list_view_lich_kham_hien_tai.xml" value="0.264" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/nut_them_cua_dien_dan.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/tab_da_hoan_thanh.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/tab_da_huy.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/tab_hien_tai.xml" value="0.25052083333333336" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/layout/trieuchung1_layout_custom.xml" value="0.25416666666666665" />
-        <entry key="..\:/Sem5/Android_hepat/app/src/main/res/menu/menu_bottom_nav.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/background_calendar.xml" value="0.20462962962962963" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/background_calendar.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/botron_scrollview.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/botronlayer.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/color_nav.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/duongvien_goctron.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_baseline_access_time_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.15260416666666668" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_baseline_control_point_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_baseline_event_note_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_dang.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.14635416666666667" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/layout/dialog_dangxuat.xml" value="0.25416666666666665" />
+        <entry key="..\:/HK5/Android_hepat/Android_hepat1/app/src/main/res/layout/item_list_thongbao.xml" value="0.23097826086956522" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/bg_dialog.xml" value="0.2203125" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/ic_back.xml" value="0.20462962962962963" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.20462962962962963" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/drawable/selector.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_binhluan.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_booking.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_capnhatthongtin.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_chinh_sua_lk.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_dat_lich2.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_dien_dan.xml" value="0.1921875" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_ho_so.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_lich_kham.xml" value="0.15081521739130435" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_lich_su_kham.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_navigation.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_thong_bao.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_thongtin_booking.xml" value="0.1" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_thongtin_tv.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_thongtincanhan.xml" value="0.19895833333333332" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_trang_user.xml" value="0.15" />
+        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_trang_user.xml" value="0.1" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_tu_van.xml" value="0.22" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_tu_van1.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/activity_verifyotp.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/custom_dialog.xml" value="0.14945652173913043" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/item_list_bv.xml" value="0.22" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/list_view_dien_dan.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/list_view_lich_kham_da_hoan_thanh.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/list_view_lich_kham_da_huy.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/list_view_lich_kham_hien_tai.xml" value="0.25" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/nut_them_cua_dien_dan.xml" value="0.1921875" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/tab_da_hoan_thanh.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/tab_da_huy.xml" value="0.15625" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/tab_hien_tai.xml" value="0.15625" />
         <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/layout/trieuchung1_layout_custom.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat/app/src/main/res/menu/menu_bottom_nav.xml" value="0.1921875" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat_1/app/src/main/res/layout/activity_capnhatthongtin.xml" value="0.15081521739130435" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat_1/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat_1/app/src/main/res/layout/activity_thongtincanhan.xml" value="0.22" />
-        <entry key="..\:/Users/MinhNgan/AndroidStudioProjects/Android_hepat_1/app/src/main/res/layout/activity_tu_van.xml" value="0.22" />
-        <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/drawable/ic_baseline_close_24.xml" value="0.2703125" />
-        <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_booking.xml" value="0.25416666666666665" />
-        <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_dat_lich2.xml" value="0.25416666666666665" />
         <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_gioithieuve_hepat.xml" value="0.17685185185185184" />
         <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_lich_kham.xml" value="0.264" />
         <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_thong_bao.xml" value="0.264" />
         <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/activity_trang_user.xml" value="0.264" />
-        <entry key="..\:/ptdidong/Android_hepat/app/src/main/res/layout/dialog_batloidatlich.xml" value="0.25416666666666665" />
         <entry key="..\:/ptdidong/tonghop/GiaodienTrangChu/app/src/main/res/layout/activity_booking.xml" value="0.25416666666666665" />
         <entry key="..\:/ptdidong/tonghop/GiaodienTrangChu/app/src/main/res/layout/activity_dat_lich2.xml" value="0.25416666666666665" />
         <entry key="..\:/ptdidong/tonghop/GiaodienTrangChu/app/src/main/res/layout/activity_dien_dan.xml" value="0.25416666666666665" />
@@ -146,6 +89,7 @@
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/drawable/botron_scrollview.xml" value="0.19583333333333333" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/drawable/botronlayer.xml" value="0.19583333333333333" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/drawable/ic_dang.xml" value="0.13125" />
+        <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/drawable/selector.xml" value="0.18020833333333333" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_banner1.xml" value="0.1" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_binhluan.xml" value="0.22" />
         <entry key="..\:/thaothuvo/Android_hepat/app/src/main/res/layout/activity_booking.xml" value="0.1796875" />
