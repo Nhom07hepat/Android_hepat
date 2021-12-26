@@ -71,6 +71,7 @@
         app:layout_constraintVertical_bias="0.172" />
 
     <LinearLayout
+        android:id="@+id/layChuaBL"
         android:layout_width="match_parent"
         android:layout_height="300sp"
         android:layout_marginTop="15dp"
@@ -232,15 +233,17 @@
         android:id="@+id/edtContent"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="60dp"
         android:background="#ECF0ED"
         android:gravity="start"
         android:hint="Viết bình luận"
         android:textSize="26sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.41"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/layChuaBL"
+        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.878" />
 
     <TextView
         android:id="@+id/textView3"
@@ -258,7 +261,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtContent" />
 
     <ImageButton
-        android:layout_width="40dp"
+        android:layout_width="48dp"
         android:layout_height="50dp"
         android:layout_marginTop="7dp"
         android:layout_marginBottom="4dp"
@@ -269,7 +272,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtContent" />
+        app:layout_constraintTop_toBottomOf="@+id/edtContent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView4"
@@ -286,7 +290,7 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="40dp"
+        android:layout_width="48dp"
         android:layout_height="50dp"
         android:layout_marginTop="7dp"
 
@@ -297,7 +301,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtContent" />
+        app:layout_constraintTop_toBottomOf="@+id/edtContent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
