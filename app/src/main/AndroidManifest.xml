@@ -8,7 +8,6 @@
         android:hardwareAccelerated="true"
         android:icon="@drawable/hepat"
         android:label="Hepat"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GiaodienTrangChu.NoActionBar">
         <activity
