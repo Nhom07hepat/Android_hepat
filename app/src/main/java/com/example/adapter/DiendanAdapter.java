@@ -107,6 +107,13 @@ public class DiendanAdapter extends RecyclerView.Adapter<DiendanAdapter.DienDanV
                 return false;
             }
         });
+                holder.btnCommentDienDan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, Activity_Binhluan.class);
+                context.startActivity(intent);
+            }
+        });
         holder.imbMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,6 +124,7 @@ public class DiendanAdapter extends RecyclerView.Adapter<DiendanAdapter.DienDanV
                 Button btnAnbaiviet = dialog.findViewById(R.id.btnAnbaiviet);
                 Button btnSaochep = dialog.findViewById(R.id.btnSaochep);
                 Button btnBaiVietYeuThich = dialog.findViewById(R.id.btnBaiVietYeuThich);
+
                 btnLuubaiviet.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -224,13 +232,7 @@ public class DiendanAdapter extends RecyclerView.Adapter<DiendanAdapter.DienDanV
 //        Postdiendan postdiendan=postdiendanList.get(i);
 //        holder.txtUserName.setText(postdiendan.getUserName());
 //        holder.txtUserTime.setText(postdiendan.getUserTime());
-//        holder.btnComment.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent(context, Activity_Binhluan.class);
-//                context.startActivity(intent);
-//            }
-//        });
+
 //        holder.txtUserQuestion.setText(postdiendan.getUserContent());
 //        holder.imbtnMore.setOnClickListener(new View.OnClickListener() {
 //            @Override
