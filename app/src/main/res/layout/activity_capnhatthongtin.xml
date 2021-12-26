@@ -32,12 +32,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.447"
-        tools:layout_editor_absoluteX="16dp"
-        app:layout_constraintBaseline_toTopOf="parent"
-        android:layout_marginTop="30dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTital"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,9 +73,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:hint="Vd: 01/01/1991"
             android:inputType="date"
             android:text="__/__/____"
-            android:hint="vd: 01/01/1991"
             android:textSize="20sp" />
 
         <TextView
@@ -110,7 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:hint="vd: 0987654321"
+            android:hint="Vd: 0987654321"
             android:textSize="20sp" />
 
         <TextView
@@ -128,8 +129,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:textSize="20sp"
-            android:hint="vd: số 01, Phạm Đình chiểu, Bến Nghé, q.1,HCM"/>
+            android:hint="Vd: Số 01, Nguyễn Đình Chiểu, Bến Nghé, Q.1, HCM"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/btnCapNhatTT"

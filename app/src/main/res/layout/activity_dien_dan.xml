@@ -12,6 +12,7 @@
     android:layout_width="match_parent"
     android:layout_height="90dp"
     android:text="Diễn Đàn"
+    android:textColor="@color/black"
     android:textSize="30sp"
     android:background="#37D16D"
     android:textStyle="bold"

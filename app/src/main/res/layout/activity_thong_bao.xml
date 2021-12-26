@@ -137,8 +137,7 @@
                 android:layout_marginTop="20dp"
                 android:listSelector="#34D16D"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtHomNay"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/txtHomNay" />
         </LinearLayout>
     </ScrollView>
 
@@ -147,11 +146,10 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.13"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTital"
+        tools:ignore="MissingConstraints">
         <!--    <TextView-->
         <!--        android:id="@+id/txtHomNay"-->
         <!--        android:layout_width="wrap_content"-->
@@ -169,6 +167,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_marginTop="5dp">
 
             <TextView

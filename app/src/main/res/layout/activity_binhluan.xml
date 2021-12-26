@@ -24,9 +24,7 @@
             android:id="@+id/imvThumbBV"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
             android:src="@drawable/blue_person"
             app:civ_border_color="@color/white"
             app:civ_border_width="2dp"
@@ -43,7 +41,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:text="Hoàng Thị Nga"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -52,8 +49,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:gravity="center"
                 android:text="3 giờ trước"
                 android:textSize="17sp" />
 
@@ -93,7 +88,8 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="15dp"
             android:background="@color/white"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,7 +102,6 @@
                     android:layout_marginTop="15dp"
                     android:background="@drawable/botron_scrollview"
                     android:backgroundTint="#ECF0ED"
-
                     android:orientation="vertical">
 
                     <LinearLayout

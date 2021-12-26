@@ -50,6 +50,7 @@
         android:layout_marginRight="20dp"
         android:background="#E4E3E3"
         android:layout_marginTop="30dp"/>
+
     <Button
         android:id="@+id/btnSuaBai"
         android:layout_width="wrap_content"
@@ -65,6 +66,5 @@
         android:backgroundTint="@color/white"
         android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        />
+        android:layout_marginBottom="20dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
